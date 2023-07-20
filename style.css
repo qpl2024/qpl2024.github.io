@@ -8,16 +8,17 @@ body {
 /* Header Styles */
 header {
   text-align: center;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom 0px;
 }
 
 /* Image Section Styles */
 .image-section img {
   display: block;
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0px;
 }
 
 /* Footer Styles */
@@ -27,7 +28,7 @@ footer {
 }
 
 /* Media Queries for Responsive Layout */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 500px) {   /* 768 */
   /* Adjust header and image styles for smaller screens */
   header {
     padding: 20px;
