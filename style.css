@@ -1,0 +1,42 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Image Section Styles */
+.image-section img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 10px;
+}
+
+/* Media Queries for Responsive Layout */
+@media screen and (max-width: 768px) {
+  /* Adjust header and image styles for smaller screens */
+  header {
+    padding: 20px;
+  }
+
+  .image-section img {
+    padding: 20px;
+  }
+}
+
+/* Add more media queries as needed for additional breakpoints */
+
