@@ -12,7 +12,6 @@ header {
   padding-bottom 0px;
 }
 
-/* Image Section Styles */
 .image-section img {
   display: block;
   max-width: 80%;
@@ -23,8 +22,13 @@ header {
 
 /* Footer Styles */
 footer {
+  margin-top: 20px;
   text-align: center;
-  padding: 10px;
+  padding: 5px;
+  font-size: small;
+  width: 100%;	
+  background: #ccc;
+  color: #000000;
 }
 
 /* Media Queries for Responsive Layout */
@@ -40,4 +44,29 @@ footer {
 }
 
 /* Add more media queries as needed for additional breakpoints */
+
+a:link {
+  color:#258;
+  text-decoration:none;
+  text-align:left;
+}
+
+a:visited {
+  color:#258;
+  text-decoration:none;
+}
+
+.committee-section {
+  text-align: center;
+/*  font-size: 18px; 
+  line-height: 1.6; */
+  max-width: 400px; /* Adjust the max-width as needed */
+  margin: 0 auto;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 0ex;
+} 
+
 
