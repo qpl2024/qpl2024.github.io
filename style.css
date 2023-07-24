@@ -20,23 +20,7 @@ header {
   padding: 0px;
 }
 
-/* Footer Styles 
-footer {
-  margin-top: 20px;
-  text-align: center;
-  padding: 5px;
-  font-size: small;
-  width: 100%;	
-  background: #ccc;
-  color: #000000;
-  max-width: 100%;
-}
-
-.footer-table {
-  margin: 0 auto;
-}
-*/
-
+/* Footer Styles */
 footer {
   margin-top: 20px;
   text-align: center;
