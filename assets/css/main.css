@@ -2736,7 +2736,7 @@ display: block;
 	}
 
 		table tbody tr:nth-child(2n + 1) {
-			background-color: none;
+			background-color: transparent;
 		}
 
 	table th {
@@ -2955,7 +2955,7 @@ display: block;
 			}
 
 				.wrapper.style1 table tbody tr:nth-child(2n + 1) {
-					background-color: none;
+				  background-color: transparent;
 				}
 
 			.wrapper.style1 table th {
