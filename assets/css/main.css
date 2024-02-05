@@ -27,10 +27,31 @@
     height: 100px;
 }
 
-.supporters {
+/*.supporters {
     display: inline-block;
     width: 100%;
     text-align: center;
+
+}*/
+
+.supporters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 65em;
+  width: calc(100% - 6em);
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1080px) {
+  #three .supporters{
+    flex-direction: column;
+  }
+}
+
+.supporters a {
+  margin: 10px; /* Adjust as needed for spacing between logos */
 }
 
 .sponsors {
