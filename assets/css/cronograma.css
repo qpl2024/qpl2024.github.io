@@ -80,6 +80,10 @@
     padding: 2px 3px 2px 3px;
 }
 
+.ritz .waffle .vacio {
+	border-right: 1px SOLID #000000;
+}
+
 .ritz .waffle .s9 {
 	border-right: 1px SOLID #000000;
     background-color: #fff2cc;
