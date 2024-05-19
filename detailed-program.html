@@ -17,14 +17,60 @@
   <link rel="stylesheet" href="assets/css/cronograma.css">
   <LINK rel="icon" type="image/png" href="images/favicon.png">
   <style>
-    .vertical-title {
+    .vertical-title-s4 {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      text-align: center;
+      padding: 0px 10px;
+      white-space: nowrap;
+	    border-right: 1px SOLID #000000;
+      background-color: #d9ead3;
+      color: #000000;
+      font-family: 'Arial';
+      font-size: 10pt; 
+      vertical-align: middle;
+    }
+
+    .vertical-title-s7 {
       writing-mode: vertical-rl;
       transform: rotate(180deg);
       text-align: center;
       padding: 5px 10px;
       white-space: nowrap;
+	    border-right: 1px SOLID #000000;
+      background-color: #c9daf8;
+      color: #000000;
+      font-family: 'Arial';
+      font-size: 10pt;
+      vertical-align: middle;
     }
 
+    .vertical-title-s8 {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      text-align: center;
+      padding: 5px 10px;
+      white-space: nowrap;
+	    border-right: 1px SOLID #000000;
+      background-color: #d9d2e9;
+      color: #000000;
+      font-family: 'Arial';
+      font-size: 10pt;
+      vertical-align: middle;
+    }
+    .vertical-title-s10 {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      text-align: center;
+      padding: 5px 10px;
+      white-space: nowrap;
+	    border-right: 1px SOLID #000000;
+      background-color: #d0e0e3;
+      color: #000000;
+      font-family: 'Arial';
+      font-size: 10pt;
+      vertical-align: middle;
+    }
     #collapsible-table thead {
       cursor: pointer;
     }
@@ -294,18 +340,19 @@
         <table class="waffle" cellspacing="0" cellpadding="0" id="collapsible-table">
           <thead>
             <tr style="height: 60px;">
-              <td class="s0" dir="ltr" colspan="4" style="width: 90%; vertical-align: middle; font-size: larger;">Monday
+              <td style="width: 10%;"></td>
+              <td class="s0" dir="ltr" colspan="3" style="vertical-align: middle; font-size: larger;">Monday
               </td>
             </tr>
           </thead>
           <tbody>
             <tr style="height: 30px">
-              <td class="s2" dir="ltr">9:30 - 10:00</td>
+              <td class="s2" dir="ltr" style="width: 10%;">9:30 - 10:00</td>
               <td class="s3" dir="ltr" colspan="3">Breakfast</td>
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">10:00 - 10:30</td>
-              <td class="vertical-title s4" rowspan="2">Plenary</td>
+              <td class="vertical-title-s4" style="width: 4%;" rowspan="2">Plenary</td>
               <td class="s2" dir="ltr" colspan="2">
                 <a href="javascript:void(0)" onclick="openModal('abstract3')">
                   Emmanuel Hainry, Romain Péchoux and Mário Silva<br>
@@ -328,15 +375,15 @@
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">11:15 - 11:45</td>
-              <td class="vertical-title s7" rowspan="2">Parallel</td>
-              <td class="s2" dir="ltr" style="width: 45%;">
+              <td class="vertical-title-s7" rowspan="2">Parallel</td>
+              <td class="s2" dir="ltr" style="width: 42%;">
                 <a href="javascript:void(0)" onclick="openModal('abstract8')">
                   Maarten Grothus and V. Vilasini<br>
                   <strong>Characterizing Signalling: Connections between Causal Inference and Space-time
                     Geometry</strong>
                 </a>
               </td>
-              <td class="s2" dir="ltr" style="width: 45%;">
+              <td class="s2" dir="ltr" style="width: 42%;">
                 <a href="javascript:void(0)" onclick="openModal('abstract40')">
                   Jacopo Surace<br>
                   <strong>A theory of Inaccessible Information</strong>
@@ -364,7 +411,7 @@
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">14:00 - 14:30</td>
-              <td class="vertical-title s7" rowspan="4">Parallel</td>
+              <td class="vertical-title-s7" rowspan="4">Parallel</td>
               <td class="s2" dir="ltr">
                 <a href="javascript:void(0)" onclick="openModal('abstract14')">
                   Robert Allen and Dominic Verdon<br>
@@ -430,7 +477,7 @@
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">16:30 - 17:00</td>
-              <td class="vertical-title s7" rowspan="3">Parallel</td>
+              <td class="vertical-title-s7" rowspan="3">Parallel</td>
               <td class="s2" dir="ltr">
                 <a href="javascript:void(0)" onclick="openModal('abstract29')">
                   Massy Khoshbin, Lorenzo Catani and Matthew Leifer<br>
@@ -474,24 +521,22 @@
                 </a>
               </td>
             </tr>
-            <tr>
-              <td></td>
-            </tr>
           </tbody>
           <thead>
             <tr style="height: 60px;">
-              <td class="s0" dir="ltr" colspan="4" style="width: 90%;vertical-align: middle; font-size: larger;">Tuesday
+              <td style="width: 10%;"></td>
+              <td class="s0" dir="ltr" colspan="3" style="vertical-align: middle; font-size: larger;">Tuesday
               </td>
             </tr>
           </thead>
           <tbody>
             <tr style="height: 30px">
-              <td class="s2" dir="ltr">9:30 - 10:00</td>
+              <td class="s2" dir="ltr" style="width: 10%;">9:30 - 10:00</td>
               <td class="s3" dir="ltr" colspan="3">Breakfast</td>
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">10:00 - 10:30</td>
-              <td class="vertical-title s4" rowspan="2">Plenary</td>
+              <td class="vertical-title-s4" rowspan="2" style="width: 4%;">Plenary</td>
               <td class="s2" dir="ltr" colspan="2">
                 <a href="javascript:void(0)" onclick="openModal('abstract48')">
                   Cihan Okay and Walker Stern<br>
@@ -514,15 +559,15 @@
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">11:15 - 11:45</td>
-              <td class="vertical-title s7" rowspan="2">Parallel</td>
-              <td class="s2" dir="ltr" style="width: 45%;">
+              <td class="vertical-title-s7" rowspan="2">Parallel</td>
+              <td class="s2" dir="ltr" style="width: 42%;">
                 <a href="javascript:void(0)" onclick="openModal('abstract54')">
                   Shuyang Meng, Fionnuala Curran, Gabriel Senno, Victoria J. Wright, Máté Farkas, Valerio Scarani and
                   Antonio Acín<br>
                   <strong>Maximal intrinsic randomness of a quantum state</strong>
                 </a>
               </td>
-              <td class="s2" dir="ltr" style="width: 45%;">
+              <td class="s2" dir="ltr" style="width: 42%;">
                 <a href="javascript:void(0)" onclick="openModal('abstract55')">
                   Shashaank Khanna, Marina Maciel Ansanelli, Matthew Pusey and Elie Wolfe<br>
                   <strong>Classifying Causal Structures: Ascertaining when Classical Correlations are Constrained by
@@ -551,7 +596,7 @@
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">14:00 - 14:30</td>
-              <td class="vertical-title s7" rowspan="3">Parallel</td>
+              <td class="vertical-title-s7" rowspan="3">Parallel</td>
               <td class="s2" dir="ltr">
                 <a href="javascript:void(0)" onclick="openModal('abstract64')">
                   Shiv Akshar Yadavalli, Nikola Andrejić and Ravi Kunjwal<br>
@@ -602,27 +647,25 @@
             </tr>
             <tr style="height: 120px;">
               <td class="s2" dir="ltr">16:00 - 18:00</td>
-              <td class="vertical-title s10">Posters</td>
+              <td class="vertical-title-s10">Posters</td>
               <td class="s2" dir="ltr" colspan="2"><strong>Poster session</strong></td>
-            </tr>
-            <tr>
-              <td></td>
             </tr>
           </tbody>
           <thead>
             <tr style="height: 60px;">
-              <td class="s0" dir="ltr" colspan="4" style="width: 90%; vertical-align: middle; font-size: larger;">
+              <td style="width: 10%;"></td>
+              <td class="s0" dir="ltr" colspan="3" style="vertical-align: middle; font-size: larger;">
                 Wednesday</td>
             </tr>
           </thead>
           <tbody>
             <tr style="height: 30px">
-              <td class="s2" dir="ltr">9:30 - 10:00</td>
+              <td class="s2" dir="ltr" style="width: 10%;">9:30 - 10:00</td>
               <td class="s3" dir="ltr" colspan="3">Breakfast</td>
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">10:00 - 10:30</td>
-              <td class="vertical-title s4" rowspan="2">Plenary</td>
+              <td class="vertical-title-s4" rowspan="2" style="width: 4%;">Plenary</td>
               <td class="s2" dir="ltr" colspan="2">
                 <a href="javascript:void(0)" onclick="openModal('abstract76')">
                   Albert Aloy, Thomas Galley, Caroline Jones, Stefan Ludescher and Markus Müller<br>
@@ -644,15 +687,15 @@
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">11:15 - 11:45</td>
-              <td class="vertical-title s7" rowspan="2">Parallel</td>
-              <td class="s2" dir="ltr" style="width: 45%;">
+              <td class="vertical-title-s7" rowspan="2">Parallel</td>
+              <td class="s2" dir="ltr" style="width: 42%;">
                 <a href="javascript:void(0)" onclick="openModal('abstract82')">
                   Quanlong Wang, Boldizsár Poór and Razin A. Shaikh<br>
                   <strong>Completeness of qufinite ZXW calculus, a graphical language for finite-dimensional quantum
                     theory</strong>
                 </a>
               </td>
-              <td class="s2" dir="ltr" style="width: 45%;">
+              <td class="s2" dir="ltr" style="width: 42%;">
                 <a href="javascript:void(0)" onclick="openModal('abstract85')">
                   Uta Meyer, Ivan Supic, Frédéric Grosshans and Damian Markham<br>
                   <strong>Bell Nonlocality from Wigner Negativity in Qudit Stabilizer States</strong>
@@ -695,24 +738,22 @@
               <td class="s2" style="background-color: #eee;" dir="ltr" colspan="3"><a href="registration.html#bar">Bar
                   at Puerto Madero</a></td>
             </tr>
-            <tr>
-              <td></td>
-            </tr>
           </tbody>
           <thead>
             <tr style="height: 60px;">
-              <td class="s0" dir="ltr" colspan="4" style="width: 90%; vertical-align: middle; font-size: larger;">
+              <td style="width: 10%;"></td>
+              <td class="s0" dir="ltr" colspan="3" style="vertical-align: middle; font-size: larger;">
                 Thursday</td>
             </tr>
           </thead>
           <tbody>
             <tr style="height: 30px">
-              <td class="s2" dir="ltr">9:30 - 10:00</td>
+              <td class="s2" dir="ltr" style="width: 10%;">9:30 - 10:00</td>
               <td class="s3" dir="ltr" colspan="3">Breakfast</td>
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">10:00 - 10:30</td>
-              <td class="vertical-title s4" rowspan="2">Plenary</td>
+              <td class="vertical-title-s4" rowspan="2" style="width: 4%;">Plenary</td>
               <td class="s2" dir="ltr" colspan="2">
                 <a href="javascript:void(0)" onclick="openModal('abstract94')">
                   James Hefford and Matt Wilson<br>
@@ -735,7 +776,7 @@
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">11:15 - 11:45</td>
-              <td class="vertical-title s8" rowspan="2">Tools</td>
+              <td class="vertical-title-s8" rowspan="2">Tools</td>
               <td class="s2" dir="ltr" colspan="2">
                 <a href="javascript:void(0)" onclick="openModal('tool1')">
                   <strong>Tool presentation:</strong> Anurudh Peduri, Tim Bittner, Luca Witt, Luke Southall, Ina
@@ -759,7 +800,7 @@
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">14:00 - 14:30</td>
-              <td class="vertical-title s7" rowspan="3">Parallel</td>
+              <td class="vertical-title-s7" rowspan="3">Parallel</td>
               <td class="s2" dir="ltr">
                 <a href="javascript:void(0)" onclick="openModal('abstract100')">
                   Amy Searle, Rui Soares Barbosa and Samson Abramsky<br>
@@ -806,7 +847,7 @@
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">15:30 - 16:00</td>
-              <td class="vertical-title s8" rowspan="1">Industrial</td>
+              <td class="vertical-title-s8" rowspan="1">Industrial</td>
               <td class="s2" dir="ltr" colspan="2">
                 <a href="javascript:void(0)" onclick="openModal('industrial')">
                   <strong>Quantinuum</strong> - Ross Duncan<br>
@@ -834,24 +875,22 @@
               <td class="s2" dir="ltr" colspan="3" style="background-color: #eee;"><a
                   href="registration.html#dinner"><strong>Conference dinner</strong></a></td>
             </tr>
-            <tr>
-              <td></td>
-            </tr>
           </tbody>
           <thead>
             <tr style="height: 60px;">
-              <td class="s0" dir="ltr" colspan="4" style="width: 90%; vertical-align: middle; font-size: larger;">Friday
+              <td style="width: 10%;"></td>
+              <td class="s0" dir="ltr" colspan="3" style="vertical-align: middle; font-size: larger;">Friday
               </td>
             </tr>
           </thead>
           <tbody>
             <tr style="height: 30px">
-              <td class="s2" dir="ltr">9:30 - 10:00</td>
+              <td class="s2" dir="ltr" style="width: 10%;">9:30 - 10:00</td>
               <td class="s3" dir="ltr" colspan="3">Breakfast</td>
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">10:00 - 10:30</td>
-              <td class="vertical-title s4" rowspan="2">Plenary</td>
+              <td class="vertical-title-s4" rowspan="2" style="width: 4%;">Plenary</td>
               <td class="s2" dir="ltr" colspan="2">
                 <a href="javascript:void(0)" onclick="openModal('abstract108')">
                   Pieter Claeys, Austen Lamacraft and Jamie Vicary<br>
@@ -874,14 +913,14 @@
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">11:15 - 11:45</td>
-              <td class="vertical-title s7" rowspan="2">Parallel</td>
-              <td class="s2" dir="ltr" style="width: 45%;">
+              <td class="vertical-title-s7" rowspan="2">Parallel</td>
+              <td class="s2" dir="ltr" style="width: 42%;">
                 <a href="javascript:void(0)" onclick="openModal('abstract117')">
                   Nick Ormrod and Jonathan Barrett<br>
                   <strong>Quantum Influences and Event Relativity</strong>
                 </a>
               </td>
-              <td class="s2" dir="ltr" style="width: 45%;">
+              <td class="s2" dir="ltr" style="width: 42%;">
                 <a href="javascript:void(0)" onclick="openModal('abstract119')">
                   Tatsuki Odake, Hlér Kristjánsson, Philip Taranto and Mio Murao<br>
                   <strong>Universal algorithm for transforming Hamiltonian eigenvalues</strong>
@@ -909,7 +948,7 @@
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">14:00 - 14:30</td>
-              <td class="vertical-title s7" rowspan="4">Parallel</td>
+              <td class="vertical-title-s7" rowspan="4">Parallel</td>
               <td class="s2" dir="ltr">
                 <a href="javascript:void(0)" onclick="openModal('abstract129')">
                   Lorenzo Giannelli and Giulio Chiribella<br>
@@ -974,7 +1013,7 @@
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">16:30 - 17:00</td>
-              <td class="vertical-title s7" rowspan="3">Parallel</td>
+              <td class="vertical-title-s7" rowspan="3">Parallel</td>
               <td class="s2" dir="ltr">
                 <a href="javascript:void(0)" onclick="openModal('abstract37')">
                   Andrew N. Glaudell, Neil J. Ross, John van de Wetering and Lia Yeh<br>
