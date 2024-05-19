@@ -17,6 +17,10 @@
   <link rel="stylesheet" href="assets/css/cronograma.css">
   <LINK rel="icon" type="image/png" href="images/favicon.png">
   <style>
+    #collapsible-table thead {
+      cursor: pointer;
+    }
+
     .modal {
       display: none;
       position: fixed;
@@ -53,6 +57,42 @@
       cursor: pointer;
     }
   </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const collapsibleTable = document.getElementById('collapsible-table');
+      const theads = collapsibleTable.querySelectorAll('thead');
+      const tbodies = collapsibleTable.querySelectorAll('tbody');
+      const toggleAllButton = document.getElementById('toggle-all');
+      let allExpanded = false;
+
+      // Initially hide all tbody elements in the collapsible table
+      tbodies.forEach(tbody => {
+        tbody.style.display = 'none';
+      });
+
+      // Toggle the display of tbody when thead is clicked in the collapsible table
+      theads.forEach(thead => {
+        thead.addEventListener('click', function () {
+          const nextTbody = thead.nextElementSibling;
+          if (nextTbody && nextTbody.tagName.toLowerCase() === 'tbody') {
+            nextTbody.style.display = nextTbody.style.display === 'none' ? 'table-row-group' : 'none';
+          }
+        });
+      });
+
+      // Toggle all tbody elements and button class/text when the button is clicked
+      toggleAllButton.addEventListener('click', function () {
+        allExpanded = !allExpanded;
+        tbodies.forEach(tbody => {
+          tbody.style.display = allExpanded ? 'table-row-group' : 'none';
+        });
+        toggleAllButton.textContent = allExpanded ? 'Contract all the days' : 'Expand all the days';
+        toggleAllButton.className = allExpanded ? 'button alt' : 'button special';
+      });
+    });
+  </script>
+
   <script>
     function openModal(abstractId) {
       document.getElementById(abstractId).style.display = "block";
@@ -115,28 +155,29 @@
         <h1>Program</h1>
       </header>
       <div class="ritz grid-container" dir="ltr">
-        <a id="show-schedule" href="javascript:void(0);" onclick="document.getElementById('schedule').style.display = 'block';
+        <button class="button special" id="show-schedule" href="javascript:void(0);" onclick="document.getElementById('schedule').style.display = 'block';
             document.getElementById('show-schedule').style.display = 'none';
             document.getElementById('hide-schedule').style.display = 'inline';">
-          Show the overall schedule
-        </a>
+          Overall schedule
+        </button>
 
-        <a id="hide-schedule" style="display:none;" href="javascript:void(0);" onclick="document.getElementById('schedule').style.display = 'none';
+        <button class="button alt" id="hide-schedule" style="display:none;" href="javascript:void(0);" onclick="document.getElementById('schedule').style.display = 'none';
             document.getElementById('show-schedule').style.display = 'inline';
             document.getElementById('hide-schedule').style.display = 'none';">
           Hide the overall schedule
-        </a>
+        </button>
 
         <div style='display:none' id='schedule'>
+          <br>
           <table class="waffle" cellspacing="0" cellpadding="0">
             <thead>
               <tr>
                 <td class="s0" dir="ltr" style="width: 10%;">Time</td>
-                <td class="s0" dir="ltr" style="width: 18%;">Monday</td>
-                <td class="s0" dir="ltr" style="width: 18%;">Tuesday</td>
-                <td class="s0" dir="ltr" style="width: 18%;">Wednesday</td>
-                <td class="s0" dir="ltr" style="width: 18%;">Thursday</td>
-                <td class="s0" dir="ltr" style="width: 18%;">Friday</td>
+                <td class="s0" dir="ltr" style="width: 18%; background-color: #F5B7B1;">Monday</td>
+                <td class="s0" dir="ltr" style="width: 18%; background-color: #A9CCE3;">Tuesday</td>
+                <td class="s0" dir="ltr" style="width: 18%; background-color: #A3E4D7;">Wednesday</td>
+                <td class="s0" dir="ltr" style="width: 18%; background-color: #D7BDE2;">Thursday</td>
+                <td class="s0" dir="ltr" style="width: 18%; background-color: #F9E79F;">Friday</td>
               </tr>
             </thead>
             <tbody>
@@ -234,25 +275,29 @@
         </div>
       </div>
     </div>
+    <br>
     <div class="inner">
       <header class="major special">
-        <h2>Day by day program</h2>
+        <h4>The detailed program</h4>
+        <button id="toggle-all" class="button special">Expand all the days</button><br>
+        Click on each day to view its details.
       </header>
       <div class="ritz grid-container" dir="ltr">
-        <table class="waffle" cellspacing="0" cellpadding="0">
+        <table class="waffle" cellspacing="0" cellpadding="0" id="collapsible-table">
           <thead>
-            <tr>
-              <td class="s0" dir="ltr" style="width: 10%;">Time</td>
-              <td class="s0" dir="ltr" colspan="2" style="width: 90%;">Monday</td>
+            <tr style="height: 60px;">
+              <td class="s0" dir="ltr" style="width: 10%;"></td>
+              <td class="s0" dir="ltr" colspan="2"
+                style="width: 90%; vertical-align: middle; font-size: larger; background-color: #F5B7B1;">Monday</td>
             </tr>
           </thead>
           <tbody>
             <tr style="height: 30px">
-              <td class="s2" dir="ltr">9:30 - 10:00</td>
+              <td class="s2lunes" dir="ltr">9:30 - 10:00</td>
               <td class="s3" dir="ltr" colspan="2">Breakfast</td>
             </tr>
             <tr style="height: 30px">
-              <td class="s2" dir="ltr">10:00 - 10:30</td>
+              <td class="s2lunes" dir="ltr">10:00 - 10:30</td>
               <td class="s4" dir="ltr" colspan="2">
                 <a href="javascript:void(0)" onclick="openModal('abstract1')">
                   Author 1, Author 2, and Author 3<br>
@@ -262,7 +307,7 @@
             </tr>
             </tr>
             <tr style="height: 30px">
-              <td class="s2" dir="ltr">10:30 - 11:00</td>
+              <td class="s2lunes" dir="ltr">10:30 - 11:00</td>
               <td class="s4" dir="ltr" colspan="2">
                 <a href="javascript:void(0)" onclick="openModal('abstract2')">
                   Daniel McNulty, Susane Calegari, Joanna Majsak and Michał Oszmaniec<br>
@@ -271,11 +316,11 @@
               </td>
             </tr>
             <tr style="height: 15px">
-              <td class="s2" dir="ltr" style="line-height: 15px"></td>
+              <td class="s2lunes" dir="ltr" style="line-height: 15px"></td>
               <td class="s6" dir="ltr" colspan="2" style="line-height: 15px">Short break to change room</td>
             </tr>
             <tr style="height: 30px">
-              <td class="s2" dir="ltr">11:15 - 11:45</td>
+              <td class="s2lunes" dir="ltr">11:15 - 11:45</td>
               <td class="s7" dir="ltr" style="width: 45%;">
                 <a href="javascript:void(0)" onclick="openModal('abstract3')">
                   A. Díaz-Caro, G. Dowek, and O. Malherbe<br>
@@ -284,146 +329,718 @@
               </td>
               <td class="s7" dir="ltr" style="width: 45%;">
                 <a href="javascript:void(0)" onclick="openModal('abstract4')">
-                  Author 4.<br>
+                  Author 4<br>
                   <strong>Title 4</strong>
                 </a>
               </td>
             </tr>
             <tr style="height: 30px">
-              <td class="s2" dir="ltr">11:45 - 12:15</td>
+              <td class="s2lunes" dir="ltr">11:45 - 12:15</td>
               <td class="s7" dir="ltr">
                 <a href="javascript:void(0)" onclick="openModal('abstract5')">
-                  Author 5.<br>
+                  Author 5<br>
                   <strong>Title 5</strong>
                 </a>
               </td>
               <td class="s7" dir="ltr">
                 <a href="javascript:void(0)" onclick="openModal('abstract6')">
-                  Author 6.<br>
+                  Author 6<br>
                   <strong>Title 6</strong>
                 </a>
               </td>
             </tr>
             <tr style="height: 105px">
-              <td class="s2" dir="ltr">12:15 - 14:00</td>
+              <td class="s2lunes" dir="ltr">12:15 - 14:00</td>
               <td class="s3" dir="ltr" colspan="2">Lunch</td>
             </tr>
             <tr style="height: 30px">
-              <td class="s2" dir="ltr">14:00 - 14:30</td>
+              <td class="s2lunes" dir="ltr">14:00 - 14:30</td>
               <td class="s7" dir="ltr">
                 <a href="javascript:void(0)" onclick="openModal('abstract7')">
-                  Author 7.<br>
+                  Author 7<br>
                   <strong>Title 7</strong>
                 </a>
               </td>
               <td class="s7" dir="ltr">
                 <a href="javascript:void(0)" onclick="openModal('abstract8')">
-                  Author 8.<br>
+                  Author 8<br>
                   <strong>Title 8</strong>
                 </a>
               </td>
             </tr>
             <tr style="height: 30px">
-              <td class="s2" dir="ltr">14:30 - 15:00</td>
+              <td class="s2lunes" dir="ltr">14:30 - 15:00</td>
               <td class="s7" dir="ltr">
                 <a href="javascript:void(0)" onclick="openModal('abstract9')">
-                  Author 9.<br>
+                  Author 9<br>
                   <strong>Title 9</strong>
                 </a>
               </td>
               <td class="s7" dir="ltr">
                 <a href="javascript:void(0)" onclick="openModal('abstract10')">
                   Author 10<br>
-                  <strong>. Title 10</strong>
+                  <strong>Title 10</strong>
                 </a>
               </td>
             </tr>
             <tr style="height: 30px">
-              <td class="s2" dir="ltr">15:00 - 15:30</td>
+              <td class="s2lunes" dir="ltr">15:00 - 15:30</td>
               <td class="s7" dir="ltr">
                 <a href="javascript:void(0)" onclick="openModal('abstract11')">
                   Author 11<br>
-                  <strong>. Title 11</strong>
+                  <strong>Title 11</strong>
                 </a>
               </td>
               <td class="s7" dir="ltr">
                 <a href="javascript:void(0)" onclick="openModal('abstract12')">
                   Author 12<br>
-                  <strong>. Title 12</strong>
+                  <strong>Title 12</strong>
                 </a>
               </td>
             </tr>
             <tr style="height: 30px">
-              <td class="s2" dir="ltr">15:30 - 16:00</td>
+              <td class="s2lunes" dir="ltr">15:30 - 16:00</td>
               <td class="s7" dir="ltr">
                 <a href="javascript:void(0)" onclick="openModal('abstract13')">
                   Author 13<br>
-                  <strong>. Title 13</strong>
+                  <strong>Title 13</strong>
                 </a>
               </td>
               <td class="s7" dir="ltr">
                 <a href="javascript:void(0)" onclick="openModal('abstract14')">
                   Author 14<br>
-                  <strong>. Title 14</strong>
+                  <strong>Title 14</strong>
                 </a>
               </td>
             </tr>
             <tr style="height: 30px">
-              <td class="s2" dir="ltr">16:00 - 16:30</td>
+              <td class="s2lunes" dir="ltr">16:00 - 16:30</td>
               <td class="s3" dir="ltr" colspan="2">Coffee break</td>
             </tr>
             <tr style="height: 30px">
-              <td class="s2" dir="ltr">16:30 - 17:00</td>
+              <td class="s2lunes" dir="ltr">16:30 - 17:00</td>
               <td class="s7" dir="ltr">
                 <a href="javascript:void(0)" onclick="openModal('abstract15')">
                   Author 15<br>
-                  <strong>. Title 15</strong>
+                  <strong>Title 15</strong>
                 </a>
               </td>
               <td class="s7" dir="ltr">
                 <a href="javascript:void(0)" onclick="openModal('abstract16')">
                   Author 16<br>
-                  <strong>. Title 16</strong>
+                  <strong>Title 16</strong>
                 </a>
               </td>
             </tr>
             <tr style="height: 30px">
-              <td class="s2" dir="ltr">17:00 - 17:30</td>
+              <td class="s2lunes" dir="ltr">17:00 - 17:30</td>
               <td class="s7" dir="ltr">
                 <a href="javascript:void(0)" onclick="openModal('abstract17')">
                   Author 17<br>
-                  <strong>. Title 17</strong>
+                  <strong>Title 17</strong>
                 </a>
               </td>
               <td class="s7" dir="ltr">
                 <a href="javascript:void(0)" onclick="openModal('abstract18')">
                   Author 18<br>
-                  <strong>. Title 18</strong>
+                  <strong>Title 18</strong>
                 </a>
               </td>
             </tr>
             <tr style="height: 30px">
-              <td class="s2" dir="ltr">17:30 - 18:00</td>
+              <td class="s2lunes" dir="ltr">17:30 - 18:00</td>
               <td class="s7" dir="ltr">
                 <a href="javascript:void(0)" onclick="openModal('abstract19')">
                   Author 19<br>
-                  <strong>. Title 19</strong>
+                  <strong>Title 19</strong>
                 </a>
               </td>
               <td class="s7" dir="ltr">
                 <a href="javascript:void(0)" onclick="openModal('abstract20')">
                   Author 20<br>
-                  <strong>. Title 20</strong>
+                  <strong>Title 20</strong>
                 </a>
               </td>
             </tr>
+            <tr>
+              <td></td>
+            </tr>
           </tbody>
-        </table>
+          <thead>
+            <tr style="height: 60px;">
+              <td class="s0" dir="ltr" style="width: 10%;"></td>
+              <td class="s0" dir="ltr" colspan="2"
+                style="width: 90%;vertical-align: middle; font-size: larger; background-color: #A9CCE3;">Tuesday</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="height: 30px">
+              <td class="s2martes" dir="ltr">9:30 - 10:00</td>
+              <td class="s3" dir="ltr" colspan="2">Breakfast</td>
+            </tr>
+            <tr style="height: 30px">
+              <td class="s2martes" dir="ltr">10:00 - 10:30</td>
+              <td class="s4" dir="ltr" colspan="2">
+                <a href="javascript:void(0)" onclick="openModal('abstract21')">
+                  Author 21<br>
+                  <strong>Title 21</strong>
+                </a>
+              </td>
+            </tr>
+            <tr style="height: 30px">
+              <td class="s2martes" dir="ltr">10:30 - 11:00</td>
+              <td class="s4" dir="ltr" colspan="2">
+                <a href="javascript:void(0)" onclick="openModal('abstract22')">
+                  Author 22<br>
+                  <strong>Title 22</strong>
+                </a>
+              </td>
+            </tr>
+            <tr style="height: 15px">
+              <td class="s2martes" dir="ltr" style="line-height: 15px"></td>
+              <td class="s6" dir="ltr" colspan="2" style="line-height: 15px">Short break to change room</td>
+            </tr>
+            <tr style="height: 30px">
+              <td class="s2martes" dir="ltr">11:15 - 11:45</td>
+              <td class="s7" dir="ltr" style="width: 45%;">
+                <a href="javascript:void(0)" onclick="openModal('abstract23')">
+                  Author 23<br>
+                  <strong>Title 23</strong>
+                </a>
+              </td>
+              <td class="s7" dir="ltr" style="width: 45%;">
+                <a href="javascript:void(0)" onclick="openModal('abstract24')">
+                  Author 24<br>
+                  <strong>Title 24</strong>
+                </a>
+              </td>
+            </tr>
+            <tr style="height: 30px">
+              <td class="s2martes" dir="ltr">11:45 - 12:15</td>
+              <td class="s7" dir="ltr">
+                <a href="javascript:void(0)" onclick="openModal('abstract25')">
+                  Author 25<br>
+                  <strong>Title 25</strong>
+                </a>
+              </td>
+              <td class="s7" dir="ltr">
+                <a href="javascript:void(0)" onclick="openModal('abstract26')">
+                  Author 26<br>
+                  <strong>Title 26</strong>
+                </a>
+              </td>
+            </tr>
+            <tr style="height: 105px">
+              <td class="s2martes" dir="ltr">12:15 - 14:00</td>
+              <td class="s3" dir="ltr" colspan="2">Lunch</td>
+            </tr>
+            <tr style="height: 30px">
+              <td class="s2martes" dir="ltr">14:00 - 14:30</td>
+              <td class="s7" dir="ltr">
+                <a href="javascript:void(0)" onclick="openModal('abstract27')">
+                  Author 27<br>
+                  <strong>Title 27</strong>
+                </a>
+              </td>
+              <td class="s7" dir="ltr">
+                <a href="javascript:void(0)" onclick="openModal('abstract28')">
+                  Author 28<br>
+                  <strong>Title 28</strong>
+                </a>
+              </td>
+            </tr>
+            <tr style="height: 30px">
+              <td class="s2martes" dir="ltr">14:30 - 15:00</td>
+              <td class="s7" dir="ltr">
+                <a href="javascript:void(0)" onclick="openModal('abstract29')">
+                  Author 29<br>
+                  <strong>Title 29</strong>
+                </a>
+              </td>
+              <td class="s7" dir="ltr">
+                <a href="javascript:void(0)" onclick="openModal('abstract30')">
+                  Author 30<br>
+                  <strong>Title 30</strong>
+                </a>
+              </td>
+            </tr>
+            <tr style="height: 30px">
+              <td class="s2martes" dir="ltr">15:00 - 15:30</td>
+              <td class="s7" dir="ltr">
+                <a href="javascript:void(0)" onclick="openModal('abstract31')">
+                  Author 31<br>
+                  <strong>Title 31</strong>
+                </a>
+              </td>
+              <td class="s7" dir="ltr">
+                <a href="javascript:void(0)" onclick="openModal('abstract32')">
+                  Author 32<br>
+                  <strong>Title 32</strong>
+                </a>
+              </td>
+            </tr>
+            <tr style="height: 30px">
+              <td class="s2martes" dir="ltr">15:30 - 16:00</td>
+              <td class="s3" dir="ltr" colspan="2">Coffee break</td>
+            </tr>
+            <tr style="height: 120px;">
+              <td class="s2martes" dir="ltr">16:00 - 18:00</td>
+              <td class="s10" dir="ltr" colspan="2">Poster session</td>
+            </tr>
+            <tr>
+              <td></td>
+            </tr>
+          </tbody>
+          <thead>
+            <tr style="height: 60px;">
+              <td class="s0" dir="ltr" style="width: 10%;"></td>
+              <td class="s0" dir="ltr" colspan="2"
+                style="width: 90%; vertical-align: middle; font-size: larger; background-color: #A3E4D7;">Wednesday</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="height: 30px">
+              <td class="s2miercoles" dir="ltr">9:30 - 10:00</td>
+              <td class="s3" dir="ltr" colspan="2">Breakfast</td>
+            </tr>
+            <tr style="height: 30px">
+              <td class="s2miercoles" dir="ltr">10:00 - 10:30</td>
+              <td class="s4" dir="ltr" colspan="2">
+                <a href="javascript:void(0)" onclick="openModal('abstract33')">
+                  Author 33<br>
+                  <strong>Title 33</strong>
+                </a>
+              </td>
+            </tr>
+            <tr style="height: 30px">
+              <td class="s2miercoles" dir="ltr">10:30 - 11:00</td>
+              <td class="s4" dir="ltr" colspan="2">
+                <a href="javascript:void(0)" onclick="openModal('abstract34')">
+                  Author 34<br>
+                  <strong>Title 34</strong>
+                </a>
+              </td>
+            </tr>
+            <tr style="height: 15px">
+              <td class="s2miercoles" dir="ltr" style="line-height: 15px"></td>
+              <td class="s6" dir="ltr" colspan="2" style="line-height: 15px">Short break to change room</td>
+            </tr>
+            <tr style="height: 30px">
+              <td class="s2miercoles" dir="ltr">11:15 - 11:45</td>
+              <td class="s7" dir="ltr" style="width: 45%;">
+                <a href="javascript:void(0)" onclick="openModal('abstract35')">
+                  Author 35<br>
+                  <strong>Title 35</strong>
+                </a>
+              </td>
+              <td class="s7" dir="ltr" style="width: 45%;">
+                <a href="javascript:void(0)" onclick="openModal('abstract36')">
+                  Author 36<br>
+                  <strong>Title 36</strong>
+                </a>
+              </td>
+            </tr>
+            <tr style="height: 30px">
+              <td class="s2miercoles" dir="ltr">11:45 - 12:15</td>
+              <td class="s7" dir="ltr">
+                <a href="javascript:void(0)" onclick="openModal('abstract37')">
+                  Author 37<br>
+                  <strong>Title 37</strong>
+                </a>
+              </td>
+              <td class="s7" dir="ltr">
+                <a href="javascript:void(0)" onclick="openModal('abstract38')">
+                  Author 38<br>
+                  <strong>Title 38</strong>
+                </a>
+              </td>
+            </tr>
+            <tr style="height: 105px">
+              <td class="s2miercoles" dir="ltr">12:15 - 14:00</td>
+              <td class="s3" dir="ltr" colspan="2">Lunch</td>
+            </tr>
+            <tr style="height: 60px">
+              <td class="s2miercoles" dir="ltr">14:00 - 15:00</td>
+              <td colspan="2" class="s0"></td>
+            </tr>
+            <tr style="height: 210px;">
+              <td class="s2miercoles" dir="ltr">15:00 - 18:30</td>
+              <td class="s9" dir="ltr" colspan="2"><a href="registration.html#excursion">Excursion to Delta de Tigre</a>
+              </td>
+            </tr>
+            <tr style="height: 240px;">
+              <td class="s2miercoles" dir="ltr">18:30 - 22:30</td>
+              <td class="s9" dir="ltr" colspan="2"><a href="registration.html#bar">Bar at Puerto Madero</a></td>
+            </tr>
+            <tr>
+              <td></td>
+            </tr>
+          </tbody>
+          <thead>
+            <tr style="height: 60px;">
+              <td class="s0" dir="ltr" style="width: 10%;"></td>
+              <td class="s0" dir="ltr" colspan="2"
+                style="width: 90%; vertical-align: middle; font-size: larger; background-color: #D7BDE2;">Thursday</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="height: 30px">
+              <td class="s2jueves" dir="ltr">9:30 - 10:00</td>
+              <td class="s3" dir="ltr" colspan="2">Breakfast</td>
+            </tr>
+            <tr style="height: 30px">
+              <td class="s2jueves" dir="ltr">10:00 - 10:30</td>
+              <td class="s4" dir="ltr" colspan="2">
+                <a href="javascript:void(0)" onclick="openModal('abstract39')">
+                  Author 39<br>
+                  <strong>Title 39</strong>
+                </a>
+              </td>
+            </tr>
+            <tr style="height: 30px">
+              <td class="s2jueves" dir="ltr">10:30 - 11:00</td>
+              <td class="s4" dir="ltr" colspan="2">
+                <a href="javascript:void(0)" onclick="openModal('abstract40')">
+                  Author 40<br>
+                  <strong>Title 40</strong>
+                </a>
+              </td>
+            </tr>
+            <tr style="height: 15px">
+              <td class="s2jueves" dir="ltr" style="line-height: 15px"></td>
+              <td class="s6" dir="ltr" colspan="2" style="line-height: 15px">Short break to change room</td>
+            </tr>
+            <tr style="height: 30px">
+              <td class="s2jueves" dir="ltr">11:15 - 11:45</td>
+              <td class="s8" dir="ltr" colspan="2">
+                <a href="javascript:void(0)" onclick="openModal('tool1')">
+                  Author Tool 1<br>
+                  <strong>Title Tool 1</strong>
+                </a>
+              </td>
+            </tr>
+            <tr style="height: 30px">
+              <td class="s2jueves" dir="ltr">11:45 - 12:15</td>
+              <td class="s8" dir="ltr" colspan="2">
+                <a href="javascript:void(0)" onclick="openModal('tool2')">
+                  Author Tool 2<br>
+                  <strong>Title Tool 2</strong>
+                </a>
+              </td>
+            </tr>
+            <tr style="height: 105px">
+              <td class="s2jueves" dir="ltr">12:15 - 14:00</td>
+              <td class="s3" dir="ltr" colspan="2">Lunch</td>
+            </tr>
+            <tr style="height: 30px">
+              <td class="s2jueves" dir="ltr">14:00 - 14:30</td>
+              <td class="s7" dir="ltr">
+                <a href="javascript:void(0)" onclick="openModal('abstract41')">
+                  Author 41<br>
+                  <strong>Title 41</strong>
+                </a>
+              </td>
+              <td class="s7" dir="ltr">
+                <a href="javascript:void(0)" onclick="openModal('abstract42')">
+                  Author 42<br>
+                  <strong>Title 42</strong>
+                </a>
+              </td>
+            </tr>
+            <tr style="height: 30px">
+              <td class="s2jueves" dir="ltr">14:30 - 15:00</td>
+              <td class="s7" dir="ltr">
+                <a href="javascript:void(0)" onclick="openModal('abstract43')">
+                  Author 43<br>
+                  <strong>Title 43</strong>
+                </a>
+              </td>
+              <td class="s7" dir="ltr">
+                <a href="javascript:void(0)" onclick="openModal('abstract44')">
+                  Author 44<br>
+                  <strong>Title 44</strong>
+                </a>
+              </td>
+            </tr>
+            <tr style="height: 30px">
+              <td class="s2jueves" dir="ltr">15:00 - 15:30</td>
+              <td class="s7" dir="ltr">
+                <a href="javascript:void(0)" onclick="openModal('abstract45')">
+                  Author 45<br>
+                  <strong>Title 45</strong>
+                </a>
+              </td>
+              <td class="s7" dir="ltr">
+                <a href="javascript:void(0)" onclick="openModal('abstract46')">
+                  Author 46<br>
+                  <strong>Title 46</strong>
+                </a>
+              </td>
+            </tr>
+            <tr style="height: 10px">
+              <td class="s2jueves" dir="ltr">15:30 - 15:40</td>
+              <td class="s8" dir="ltr" colspan="2">
+                <a href="javascript:void(0)" onclick="openModal('industrial1')">
+                  <strong>Quantinuum</strong> - Ross Duncan
+                  <!-- Title Industrial 1 -   -->
+                </a>
+              </td>
+            </tr>
+            <tr style="height: 10px">
+              <td class="s2jueves" dir="ltr">15:40 - 15:50</td>
+              <td class="s8" dir="ltr" colspan="2">
+                <a href="javascript:void(0)" onclick="openModal('industrial2')">
+                  <strong>TII</strong> - Ariel Bendersky
+                  <!-- Title Industrial 2 -  -->
+                </a>
+              </td>
+            </tr>
+            <tr style="height: 10px">
+              <td class="s2jueves" dir="ltr">15:50 - 16:00</td>
+              <td class="s8" dir="ltr" colspan="2">
+                <a href="javascript:void(0)" onclick="openModal('industrial3')">
+                  <strong>Quandela</strong> - Shane Mansfield
+                  <!-- Title Industrial 3 -  -->
+                </a>
+              </td>
+            </tr>
+            <tr style="height: 30px">
+              <td class="s2jueves" dir="ltr">16:00 - 16:30</td>
+              <td class="s3" dir="ltr" colspan="2">Coffee break</td>
+            </tr>
+            <tr style="height: 90px">
+              <td class="s2jueves" dir="ltr">16:30 - 18:00</td>
+              <td class="s8" dir="ltr" colspan="2">QPL General Meeting</td>
+            </tr>
+            <tr style="height: 120px">
+              <td class="s2jueves" dir="ltr">18:00 - 20:00</td>
+              <td class="s12" colspan="2"></td>
+            </tr>
+            <tr style="height: 150px">
+              <td class="s2jueves" dir="ltr">20:00 - 22:30</td>
+              <td class="s9" dir="ltr" colspan="2"><a href="registration.html#dinner">Conference dinner</a></td>
+            </tr>
+            <tr>
+              <td></td>
+            </tr>
+          </tbody>
+          <thead>
+            <tr style="height: 60px;">
+              <td class="s0" dir="ltr" style="width: 10%;"></td>
+              <td class="s0" dir="ltr" colspan="2"
+                style="width: 90%; vertical-align: middle; font-size: larger; background-color: #F9E79F;">Friday</td>
+            </tr>
+          </thead>
+            <tbody>
+            <tr style="height: 30px">
+              <td class="s2lunes" dir="ltr">9:30 - 10:00</td>
+              <td class="s3" dir="ltr" colspan="2">Breakfast</td>
+            </tr>
+            <tr style="height: 30px">
+              <td class="s2lunes" dir="ltr">10:00 - 10:30</td>
+              <td class="s4" dir="ltr" colspan="2">
+              <a href="javascript:void(0)" onclick="openModal('abstract47')">
+                Author 47<br>
+                <strong>Title 47</strong>
+              </a>
+              </td>
+            </tr>
+            </tr>
+            <tr style="height: 30px">
+              <td class="s2lunes" dir="ltr">10:30 - 11:00</td>
+              <td class="s4" dir="ltr" colspan="2">
+              <a href="javascript:void(0)" onclick="openModal('abstract48')">
+                Author 48<br>
+                <strong>Title 48</strong>
+              </td>
+            </tr>
+            <tr style="height: 15px">
+              <td class="s2lunes" dir="ltr" style="line-height: 15px"></td>
+              <td class="s6" dir="ltr" colspan="2" style="line-height: 15px">Short break to change room</td>
+            </tr>
+            <tr style="height: 30px">
+              <td class="s2lunes" dir="ltr">11:15 - 11:45</td>
+              <td class="s7" dir="ltr" style="width: 45%;">
+              <a href="javascript:void(0)" onclick="openModal('abstract49')">
+                Author 49<br>
+                <strong>Title 49</strong>
+              </a>
+              </td>
+              <td class="s7" dir="ltr" style="width: 45%;">
+              <a href="javascript:void(0)" onclick="openModal('abstract50')">
+                Author 50<br>
+                <strong>Title 50</strong>
+              </a>
+              </td>
+            </tr>
+            <tr style="height: 30px">
+              <td class="s2lunes" dir="ltr">11:45 - 12:15</td>
+              <td class="s7" dir="ltr">
+              <a href="javascript:void(0)" onclick="openModal('abstract51')">
+                Author 51<br>
+                <strong>Title 51</strong>
+              </a>
+              </td>
+              <td class="s7" dir="ltr">
+              <a href="javascript:void(0)" onclick="openModal('abstract52')">
+                Author 52<br>
+                <strong>Title 52</strong>
+              </a>
+              </td>
+            </tr>
+            <tr style="height: 105px">
+              <td class="s2lunes" dir="ltr">12:15 - 14:00</td>
+              <td class="s3" dir="ltr" colspan="2">Lunch</td>
+            </tr>
+            <tr style="height: 30px">
+              <td class="s2lunes" dir="ltr">14:00 - 14:30</td>
+              <td class="s7" dir="ltr">
+              <a href="javascript:void(0)" onclick="openModal('abstract53')">
+                Author 53<br>
+                <strong>Title 53</strong>
+              </a>
+              </td>
+              <td class="s7" dir="ltr">
+              <a href="javascript:void(0)" onclick="openModal('abstract54')">
+                Author 54<br>
+                <strong>Title 54</strong>
+              </a>
+              </td>
+            </tr>
+            <tr style="height: 30px">
+              <td class="s2lunes" dir="ltr">14:30 - 15:00</td>
+              <td class="s7" dir="ltr">
+              <a href="javascript:void(0)" onclick="openModal('abstract55')">
+                Author 55<br>
+                <strong>Title 55</strong>
+              </a>
+              </td>
+              <td class="s7" dir="ltr">
+              <a href="javascript:void(0)" onclick="openModal('abstract56')">
+                Author 56<br>
+                <strong>Title 56</strong>
+              </a>
+              </td>
+            </tr>
+            <tr style="height: 30px">
+              <td class="s2lunes" dir="ltr">15:00 - 15:30</td>
+              <td class="s7" dir="ltr">
+              <a href="javascript:void(0)" onclick="openModal('abstract57')">
+                Author 57<br>
+                <strong>Title 57</strong>
+              </a>
+              </td>
+              <td class="s7" dir="ltr">
+              <a href="javascript:void(0)" onclick="openModal('abstract58')">
+                Author 58<br>
+                <strong>Title 58</strong>
+              </a>
+              </td>
+            </tr>
+            <tr style="height: 30px">
+              <td class="s2lunes" dir="ltr">15:30 - 16:00</td>
+              <td class="s7" dir="ltr">
+              <a href="javascript:void(0)" onclick="openModal('abstract59')">
+                Author 59<br>
+                <strong>Title 59</strong>
+              </a>
+              </td>
+              <td class="s7" dir="ltr">
+              <a href="javascript:void(0)" onclick="openModal('abstract60')">
+                Author 60<br>
+                <strong>Title 60</strong>
+              </a>
+              </td>
+            </tr>
+            <tr style="height: 30px">
+              <td class="s2lunes" dir="ltr">16:00 - 16:30</td>
+              <td class="s3" dir="ltr" colspan="2">Coffee break</td>
+            </tr>
+            <tr style="height: 30px">
+              <td class="s2lunes" dir="ltr">16:30 - 17:00</td>
+              <td class="s7" dir="ltr">
+              <a href="javascript:void(0)" onclick="openModal('abstract61')">
+                Author 61<br>
+                <strong>Title 61</strong>
+              </a>
+              </td>
+              <td class="s7" dir="ltr">
+              <a href="javascript:void(0)" onclick="openModal('abstract62')">
+                Author 62<br>
+                <strong>Title 62</strong>
+              </a>
+              </td>
+            </tr>
+            <tr style="height: 30px">
+              <td class="s2lunes" dir="ltr">17:00 - 17:30</td>
+              <td class="s7" dir="ltr">
+              <a href="javascript:void(0)" onclick="openModal('abstract63')">
+                Author 63<br>
+                <strong>Title 63</strong>
+              </a>
+              </td>
+              <td class="s7" dir="ltr">
+              <a href="javascript:void(0)" onclick="openModal('abstract64')">
+                Author 64<br>
+                <strong>Title 64</strong>
+              </a>
+              </td>
+            </tr>
+            <tr style="height: 30px">
+              <td class="s2lunes" dir="ltr">17:30 - 18:00</td>
+              <td class="s7" dir="ltr">
+              <a href="javascript:void(0)" onclick="openModal('abstract65')">
+                Author 65<br>
+                <strong>Title 65</strong>
+              </a>
+              </td>
+              <td class="s7" dir="ltr">
+              <a href="javascript:void(0)" onclick="openModal('abstract66')">
+                Author 66<br>
+                <strong>Title 66</strong>
+              </a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+            </tr>
+            </tbody>
+          </table>
       </div>
     </div>
   </section>
 
   <!-- Modals for abstracts -->
+  <div id="industrial1" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('industrial1')">&times;</span>
+      <strong>Ross Duncan</strong>
+      <h4>Quantinuum</h4>
+      <p style="text-align: justify;">
+        <a href="https://www.quantinuum.com/">www.quantinuum.com</a>
+      </p>
+    </div>
+  </div>
+  <div id="industrial2" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('industrial2')">&times;</span>
+      <strong>Ariel Bendersky</strong>
+      <h4>TII</h4>
+      <p style="text-align: justify;">
+        <a href="https://www.tii.ae/">www.tii.ae</a>
+      </p>
+    </div>
+  </div>
+  <div id="industrial3" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('industrial3')">&times;</span>
+      <strong>Shane Mansfield</strong>
+      <h4>Quandela</h4>
+      <p style="text-align: justify;">
+        <a href="https://www.quandela.com/">www.quandela.com</a>
+      </p>
+    </div>
+  </div>
   <div id="abstract1" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('abstract1')">&times;</span>

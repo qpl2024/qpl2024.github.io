@@ -123,6 +123,65 @@
     padding: 2px 3px 2px 3px;
 }
 
+.ritz .waffle .s2lunes {
+	border-right: 1px SOLID #000000;
+    background-color: #F5B7B1;
+    text-align: center;
+    color: #000000;
+    font-family: 'Arial';
+    font-size: 10pt;
+    vertical-align: middle;
+    direction: ltr;
+    padding: 2px 3px 2px 3px;
+}
+
+.ritz .waffle .s2martes {
+	border-right: 1px SOLID #000000;
+    background-color: #A9CCE3;
+    text-align: center;
+    color: #000000;
+    font-family: 'Arial';
+    font-size: 10pt;
+    vertical-align: middle;
+    direction: ltr;
+    padding: 2px 3px 2px 3px;
+}
+
+.ritz .waffle .s2miercoles {
+	border-right: 1px SOLID #000000;
+    background-color: #A3E4D7;
+    text-align: center;
+    color: #000000;
+    font-family: 'Arial';
+    font-size: 10pt;
+    vertical-align: middle;
+    direction: ltr;
+    padding: 2px 3px 2px 3px;
+}
+
+.ritz .waffle .s2jueves {
+	border-right: 1px SOLID #000000;
+    background-color: #D7BDE2;
+    text-align: center;
+    color: #000000;
+    font-family: 'Arial';
+    font-size: 10pt;
+    vertical-align: middle;
+    direction: ltr;
+    padding: 2px 3px 2px 3px;
+}
+
+.ritz .waffle .s2viernes {
+	border-right: 1px SOLID #000000;
+    background-color: #F9E79F;
+    text-align: center;
+    color: #000000;
+    font-family: 'Arial';
+    font-size: 10pt;
+    vertical-align: middle;
+    direction: ltr;
+    padding: 2px 3px 2px 3px;
+}
 .ritz .waffle .s3 {
 	border-right: 1px SOLID #000000;
     background-color: #fce5cd;
