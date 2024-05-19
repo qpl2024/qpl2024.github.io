@@ -64,7 +64,7 @@
       text-align: center;
       padding: 5px 10px;
       white-space: nowrap;
-	    border-right: 1px SOLID #000000;
+      border-right: 1px SOLID #000000;
       background-color: #d0e0e3;
       color: #000000;
       font-family: 'Arial';
@@ -112,18 +112,18 @@
     }
   </style>
 
-  <script>
+  <!-- <script>
     document.addEventListener('DOMContentLoaded', function () {
       const collapsibleTable = document.getElementById('collapsible-table');
       const theads = collapsibleTable.querySelectorAll('thead');
       const tbodies = collapsibleTable.querySelectorAll('tbody');
       const toggleAllButton = document.getElementById('toggle-all');
-      let allExpanded = false;
+      let allExpanded = true;
 
       // Initially hide all tbody elements in the collapsible table
-      tbodies.forEach(tbody => {
-        tbody.style.display = 'none';
-      });
+      // tbodies.forEach(tbody => {
+      //   tbody.style.display = 'none';
+      // });
 
       // Toggle the display of tbody when thead is clicked in the collapsible table
       theads.forEach(thead => {
@@ -145,7 +145,58 @@
         toggleAllButton.className = allExpanded ? 'button alt' : 'button special';
       });
     });
-  </script>
+  </script> -->
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const collapsibleTable = document.getElementById('collapsible-table');
+  const theads = collapsibleTable.querySelectorAll('thead');
+  const tbodies = collapsibleTable.querySelectorAll('tbody');
+  const toggleAllButton = document.getElementById('toggle-all');
+  let allExpanded = true;  // Set to true since tbodies are initially shown
+
+  // Initially, we don't need to hide tbody elements, as they are already shown
+
+  // Toggle the display of tbody when thead is clicked in the collapsible table
+  theads.forEach(thead => {
+      thead.addEventListener('click', function() {
+          const nextTbody = thead.nextElementSibling;
+          if (nextTbody && nextTbody.tagName.toLowerCase() === 'tbody') {
+              // Hide all other tbodies
+              tbodies.forEach(tbody => {
+                  if (tbody !== nextTbody) {
+                      tbody.style.display = 'none';
+                  }
+              });
+              // Toggle the clicked tbody
+              nextTbody.style.display = nextTbody.style.display === 'none' ? 'table-row-group' : 'none';
+          }
+      });
+  });
+
+  // Toggle all tbody elements and button class/text when the button is clicked
+  toggleAllButton.addEventListener('click', function() {
+      allExpanded = !allExpanded;
+      tbodies.forEach(tbody => {
+          tbody.style.display = allExpanded ? 'table-row-group' : 'none';
+      });
+      toggleAllButton.textContent = allExpanded ? 'Hide all the days' : 'Expand all the days';
+      toggleAllButton.className = allExpanded ? 'button alt' : 'button special';
+  });
+});
+
+function showSchedule() {
+  document.getElementById('schedule').style.display = 'block';
+  document.getElementById('show-schedule').style.display = 'none';
+  document.getElementById('hide-schedule').style.display = 'inline';
+}
+
+function hideSchedule() {
+  document.getElementById('schedule').style.display = 'none';
+  document.getElementById('show-schedule').style.display = 'inline';
+  document.getElementById('hide-schedule').style.display = 'none';
+}
+</script>
 
   <script>
     function openModal(abstractId) {
@@ -333,7 +384,7 @@
     <div class="inner">
       <header class="major special">
         <h4>The detailed program</h4>
-        <button id="toggle-all" class="button special">Expand all the days</button><br>
+        <button id="toggle-all" class="button alt">Contract all the days</button><br>
         Click on each day to view its details.
       </header>
       <div class="ritz grid-container" dir="ltr">
