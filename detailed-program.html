@@ -145,19 +145,30 @@
   </script>
 
   <script>
+    let currentModalId = '';
+
     function openModal(abstractId) {
+      currentModalId = abstractId;
       document.getElementById(abstractId).style.display = "block";
     }
 
     function closeModal(abstractId) {
       document.getElementById(abstractId).style.display = "none";
+      currentModalId = '';
     }
 
-    window.onclick = function (event) {
-      if (event.target.classList.contains('modal')) {
-        event.target.style.display = "none";
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && currentModalId) {
+        closeModal(currentModalId);
       }
-    }
+    });
+
+      window.onclick = function (event) {
+        if (event.target.classList.contains('modal')) {
+          event.target.style.display = "none";
+          currentModalId = '';
+        }
+      }
   </script>
 </head>
 
@@ -576,7 +587,8 @@
               <td class="s2" dir="ltr">11:45 - 12:15</td>
               <td class="s2" dir="ltr">
                 <a href="javascript:void(0)" onclick="openModal('abstract88')">
-                  F. J. R. Ruiz, T. Laakkonen, J. Bausch, M. Balog, M. Barekatain, F. J. H. Heras, A. Novikov, N. Fitzpatrick, B. Romera-Paredes, J. van de Wetering, A. Fawzi, K. Meichanetzidis and P. Kohli<br>
+                  F. J. R. Ruiz, T. Laakkonen, J. Bausch, M. Balog, M. Barekatain, F. J. H. Heras, A. Novikov, N.
+                  Fitzpatrick, B. Romera-Paredes, J. van de Wetering, A. Fawzi, K. Meichanetzidis and P. Kohli<br>
                   <strong>Quantum Circuit Optimization with AlphaTensor</strong>
                 </a>
               </td>
@@ -979,7 +991,7 @@
                 <a href="javascript:void(0)" onclick="openModal('abstract38')">
                   Dichuan Gao<br>
                   <strong>The Qudit ZH Calculus for Arbitrary Finite Fields: Universality and Application</strong>
-                  </a>
+                </a>
               </td>
             </tr>
             <tr style="height: 30px">
@@ -2384,7 +2396,16 @@
       <strong>Dichuan Gao</strong>
       <h4>The Qudit ZH Calculus for Arbitrary Finite Fields: Universality and Application</h4>
       <p style="text-align: justify;">
-        We propose a generalization of the graphical ZH calculus to qudits of prime-power dimensions q = p<sup>t</sup>, implementing field arithmetic in arbitrary finite fields. This is an extension of a previous result by Roy et.al. which implemented arithmetic of prime-sized fields; and an alternative to a result by de Beaudrop which extended the ZH to implement cyclic-ring arithmetic in &Zopf; / q&Zopf; rather than field arithmetic in &Fopf;<sub>q</sub>. We show this generalized ZH calculus to be universal over matrices &Copf;<sup>qn</sup> &rightarrow; &Copf;<sup>qm</sup> with entries in the ring &Zopf;[&omega;] where &omega, is a <em>p</em>th (not <em>q</em>th!) root of unity. As an illustration of the necessity of such an extension of ZH for field rather than cyclic-ring arithmetic, we offer a graphical description and proof for a quantum algorithm for polynomial interpolation. This algorithm relies on the invertibility of multiplication in non-prime-sized fields, and therefore can only be described in a graphical language that implements field, rather than ring, multiplication.
+        We propose a generalization of the graphical ZH calculus to qudits of prime-power dimensions q = p<sup>t</sup>,
+        implementing field arithmetic in arbitrary finite fields. This is an extension of a previous result by Roy
+        et.al. which implemented arithmetic of prime-sized fields; and an alternative to a result by de Beaudrop which
+        extended the ZH to implement cyclic-ring arithmetic in &Zopf; / q&Zopf; rather than field arithmetic in
+        &Fopf;<sub>q</sub>. We show this generalized ZH calculus to be universal over matrices &Copf;<sup>qn</sup>
+        &rightarrow; &Copf;<sup>qm</sup> with entries in the ring &Zopf;[&omega;] where &omega, is a <em>p</em>th (not
+        <em>q</em>th!) root of unity. As an illustration of the necessity of such an extension of ZH for field rather
+        than cyclic-ring arithmetic, we offer a graphical description and proof for a quantum algorithm for polynomial
+        interpolation. This algorithm relies on the invertibility of multiplication in non-prime-sized fields, and
+        therefore can only be described in a graphical language that implements field, rather than ring, multiplication.
       </p>
     </div>
   </div>
