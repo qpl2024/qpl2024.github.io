@@ -17,6 +17,18 @@
   <link rel="stylesheet" href="assets/css/cronograma.css">
   <LINK rel="icon" type="image/png" href="images/favicon.png">
   <style>
+    .clickable-cell {
+      cursor: pointer;
+    }
+
+    .clickable-cell a {
+      text-decoration: none;
+    } 
+
+     .clickable-cell a:hover {
+      text-decoration: none;
+    } 
+
     #collapsible-table thead {
       cursor: pointer;
     }
@@ -291,10 +303,8 @@
               </tr>
               <tr style="height: 30px">
                 <td class="s2" dir="ltr">15:00 - 15:30</td>
-                <td class="s9" dir="ltr" rowspan="7">
-                  <a href="javascript:void(0)" onclick="openModal('excursion')">
+                <td class="s9 clickable-cell" dir="ltr" rowspan="7" onclick="openModal('excursion')">
                     Excursion to Delta de Tigre
-                  </a>
                 </td>
               </tr>
               <tr style="height: 30px">
@@ -329,15 +339,13 @@
               </tr>
               <tr style="height: 90px">
                 <td class="s2" dir="ltr">18:30 - 20:00</td>
-                <td class="s9" dir="ltr" rowspan="2"><a href="javascript:void(0)" onclick="openModal('excursion')">Bar
-                    at Puerto Madero</a></td>
+                <td class="s9 clickable-cell" dir="ltr" rowspan="2" onclick="openModal('excursion')">Bar
+                    at Puerto Madero</td>
               </tr>
               <tr style="height: 150px">
                 <td class="s2" dir="ltr">20:00 - 22:30</td>
-                <td class="s9" dir="ltr" colspan="2">
-                  <a href="javascript:void(0)" onclick="openModal('dinner')">
+                <td class="s9 clickable-cell" dir="ltr" colspan="2" onclick="openModal('dinner')">
                     Conference dinner
-                  </a>
                 </td>
               </tr>
             </tbody>
@@ -369,21 +377,17 @@
             <tr style="height: 30px">
               <td class="s2" dir="ltr">10:00 - 10:30</td>
               <td class="s4" style="width: 2%;" rowspan="2"></td>
-              <td class="s2" dir="ltr" colspan="2">
-                <a href="javascript:void(0)" onclick="openModal('abstract117')">
+              <td class="s2 clickable-cell" dir="ltr" colspan="2" onclick="openModal('abstract117')">
                   Nick Ormrod and Jonathan Barrett<br>
                   <strong>Quantum Influences and Event Relativity</strong>
-                </a>
               </td>
             </tr>
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">10:30 - 11:00</td>
-              <td class="s2" dir="ltr" colspan="2">
-                <a href="javascript:void(0)" onclick="openModal('abstract43')">
+              <td class="s2 clickable-cell" dir="ltr" colspan="2" onclick="openModal('abstract43')">
                   Zixuan Liu and Giulio Chiribella<br>
                   <strong>Tsirelson bounds for quantum correlations with indefinite causal order</strong>
-                </a>
               </td>
             </tr>
             <tr style="height: 15px">
@@ -393,33 +397,25 @@
             <tr style="height: 30px">
               <td class="s2" dir="ltr">11:15 - 11:45</td>
               <td class="s7" rowspan="2" style="width: 2%;"></td>
-              <td class="s2" dir="ltr" style="width: 42%;">
-                <a href="javascript:void(0)" onclick="openModal('abstract104')">
+              <td class="s2 clickable-cell" dir="ltr" style="width: 42%;" onclick="openModal('abstract104')">
                   Hector Bombin, Daniel Litinski, Naomi Nickerson, Fernando Pastawski and Sam Roberts<br>
                   <strong>Unifying flavors of fault tolerance with the ZX calculus</strong>
-                </a>
               </td>
-              <td class="s2" dir="ltr" style="width: 42%;">
-                <a href="javascript:void(0)" onclick="openModal('abstract8')">
+              <td class="s2 clickable-cell" dir="ltr" style="width: 42%;" onclick="openModal('abstract8')">
                   Maarten Grothus and V. Vilasini<br>
                   <strong>Characterizing Signalling: Connections between Causal Inference and Space-time
                     Geometry</strong>
-                </a>
               </td>
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">11:45 - 12:15</td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract25')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract25')">
                   Aleks Kissinger and John van de Wetering<br>
                   <strong>Scalable spider nests (...or how to graphically grok transversal non-Clifford gates)</strong>
-                </a>
               </td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract107')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract107')">
                   Kathleen Barsse, Paolo Perinotti, Alessandro Tosini and Leonardo Vaglini<br>
                   <strong>Causal influence versus signalling for interacting quantum channels</strong>
-                </a>
               </td>
             </tr>
             <tr style="height: 105px">
@@ -429,61 +425,45 @@
             <tr style="height: 30px">
               <td class="s2" dir="ltr">14:00 - 14:30</td>
               <td class="s7" rowspan="4" style="width: 2%;"></td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract106')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract106')">
                   Marco Erba, David Schmid, John Selby and Sina Soltani<br>
                   <strong>A noncontextual ontological model for bilocal classical theory</strong>
-                </a>
               </td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract94')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract94')">
                   James Hefford and Matt Wilson<br>
                   <strong>A Profunctorial Semantics for Quantum Supermaps</strong>
-                </a>
               </td>
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">14:30 - 15:00</td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract17')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract17')">
                   Raman Choudhary, Rui Soares Barbosa and Adán Cabello<br>
                   <strong>Lifting noncontextuality inequalities</strong>
-                </a>
               </td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract14')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract14')">
                   Robert Allen and Dominic Verdon<br>
                   <strong>CP-infinity and beyond: 2-categorical dilation theory</strong>
-                </a>
               </td>
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">15:00 - 15:30</td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract78')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract78')">
                   Lorenzo Catani, Thomas Galley and Tomáš Gonda<br>
                   <strong>Resource-theoretic hierarchy of generalized contextuality</strong>
-                </a>
               </td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract124')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract124')">
                   Alexander Wilce<br>
                   <strong>Compounding and Coarse-Graining as Monads</strong>
-                </a>
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">15:30 - 16:00</td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract100')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract100')">
                   Amy Searle, Rui Soares Barbosa and Samson Abramsky<br>
                   <strong>Mapping temporal correlations to contextuality correlations</strong>
-                </a>
               </td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract13')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract13')">
                   Urs Schreiber<br>
                   <strong>Topological Quantum Programming via Linear Homotopy Types</strong>
-                </a>
               </td>
             </tr>
             <tr style="height: 30px">
@@ -493,47 +473,35 @@
             <tr style="height: 30px">
               <td class="s2" dir="ltr">16:30 - 17:00</td>
               <td class="s7" rowspan="3" style="width: 2%;"></td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract85')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract85')">
                   Uta Meyer, Ivan Supic, Frédéric Grosshans and Damian Markham<br>
                   <strong>Bell Nonlocality from Wigner Negativity in Qudit Stabilizer States</strong>
-                </a>
               </td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract75')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract75')">
                   Alejandro Díaz-Caro, Gilles Dowek and Octavio Malherbe<br>
                   <strong>From linear logic to quantum control</strong>
-                </a>
               </td>
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">17:00 - 17:30</td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract60')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract60')">
                   Michael Zurel and Arne Heimendahl<br>
                   <strong>Efficient classical simulation of quantum computation beyond Wigner positivity</strong>
-                </a>
               </td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract68')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract68')">
                   Kinnari Dave, Louis Lemonnier, Romain Pechoux and Vladimir Zamdzhiev<br>
                   <strong>Combining Quantum and Classical Control</strong>
-                </a>
               </td>
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">17:30 - 18:00</td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract64')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract64')">
                   Shiv Akshar Yadavalli, Nikola Andrejić and Ravi Kunjwal<br>
                   <strong>Qualitative equivalence between incompatibility and Bell nonlocality</strong>
-                </a>
               </td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract3')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract3')">
                   Emmanuel Hainry, Romain Péchoux and Mário Silva<br>
                   <strong>A Programming Language Characterizing Quantum Polynomial Time</strong>
-                </a>
               </td>
             </tr>
           </tbody>
@@ -552,20 +520,16 @@
             <tr style="height: 30px">
               <td class="s2" dir="ltr">10:00 - 10:30</td>
               <td class="s4" rowspan="2" style="width: 2%;"></td>
-              <td class="s2" dir="ltr" colspan="2">
-                <a href="javascript:void(0)" onclick="openModal('abstract24')">
+              <td class="s2 clickable-cell" dir="ltr" colspan="2" onclick="openModal('abstract24')">
                   Alexandre Clément, Noé Delorme and Simon Perdrix<br>
                   <strong>Minimal Equational Theories for Quantum Circuits</strong>
-                </a>
               </td>
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">10:30 - 11:00</td>
-              <td class="s2" dir="ltr" colspan="2">
-                <a href="javascript:void(0)" onclick="openModal('abstract37')">
+              <td class="s2 clickable-cell" dir="ltr" colspan="2" onclick="openModal('abstract37')">
                   Andrew N. Glaudell, Neil J. Ross, John van de Wetering and Lia Yeh<br>
                   <strong>Exact Synthesis of Multiqutrit Clifford-cyclotomic Circuits</strong>
-                </a>
               </td>
             </tr>
             <tr style="height: 15px">
@@ -575,36 +539,28 @@
             <tr style="height: 30px">
               <td class="s2" dir="ltr">11:15 - 11:45</td>
               <td class="s7" rowspan="2" style="width: 2%;"></td>
-              <td class="s2" dir="ltr" style="width: 42%;">
-                <a href="javascript:void(0)" onclick="openModal('abstract113')">
+              <td class="s2 clickable-cell" dir="ltr" style="width: 42%;" onclick="openModal('abstract113')">
                   Min-Hsiu Hsieh, Leandro Mendes, Michael de Oliveira and Sathyawageeswar Subramanian<br>
                   <strong>Quantum Circuits surpass Biased Threshold Circuits in Constant-Depth</strong>
-                </a>
               </td>
               </td>
-              <td class="s2" dir="ltr" style="width: 42%;">
-                <a href="javascript:void(0)" onclick="openModal('abstract23')">
+              <td class="s2 clickable-cell" dir="ltr" style="width: 42%;" onclick="openModal('abstract23')">
                   Haruki Emori and Hiroyasu Tajima<br>
                   <strong>Error and Disturbance as Irreversibility with Applications: Unified Definition,
                     Wigner&ndash;Araki&ndash;Yanase Theorem and Out-of-Time-Order Correlator</strong>
-                </a>
               </td>
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">11:45 - 12:15</td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract88')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract88')">
                   F. J. R. Ruiz, T. Laakkonen, J. Bausch, M. Balog, M. Barekatain, F. J. H. Heras, A. Novikov, N.
                   Fitzpatrick, B. Romera-Paredes, J. van de Wetering, A. Fawzi, K. Meichanetzidis and P. Kohli<br>
                   <strong>Quantum Circuit Optimization with AlphaTensor</strong>
-                </a>
               </td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract54')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract54')">
                   Shuyang Meng, Fionnuala Curran, Gabriel Senno, Victoria J. Wright, Máté Farkas, Valerio Scarani and
                   Antonio Acín<br>
                   <strong>Maximal intrinsic randomness of a quantum state</strong>
-                </a>
               </td>
             </tr>
             <tr style="height: 105px">
@@ -614,48 +570,36 @@
             <tr style="height: 30px">
               <td class="s2" dir="ltr">14:00 - 14:30</td>
               <td class="s7" rowspan="3" style="width: 2%;"></td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract51')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract51')">
                   Yìlè Yīng, Marina Maciel Ansanelli, Andrea Di Biagio, Elie Wolfe and Eric Gama Cavalcanti<br>
                   <strong>Relating Wigner's Friend Scenarios to Nonclassical Causal Compatibility, Monogamy Relations,
                     and Fine Tuning</strong>
-                </a>
               </td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract22')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract22')">
                   John van de Wetering, Richie Yeung, Tuomas Laakkonen and Aleks Kissinger<br>
                   <strong>Optimal compilation of parametrised quantum circuits</strong>
-                </a>
               </td>
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">14:30 - 15:00</td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract33')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract33')">
                   David Schmid, Yìlè Ying and Matthew Leifer<br>
                   <strong>A review and analysis of six extended Wigner's friend arguments</strong>
-                </a>
               </td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract34')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract34')">
                   Matthew Amy, Neil J. Ross and Scott Wesley<br>
                   <strong>A Sound and Complete Equational Theory for 3-qubit Toffoli-Hadamard Circuits</strong>
-                </a>
               </td>
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">15:00 - 15:30</td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract29')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract29')">
                   Massy Khoshbin, Lorenzo Catani and Matthew Leifer<br>
                   <strong>Alternative robust ways of witnessing nonclassicality in the simplest scenario</strong>
-                </a>
               </td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract21')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract21')">
                   Aleks Kissinger, Neil J. Ross and John van de Wetering<br>
                   <strong>Catalysing Completeness and Universality</strong>
-                </a>
               </td>
             </tr>
             <tr style="height: 30px">
@@ -665,10 +609,8 @@
             <tr style="height: 120px;">
               <td class="s2" dir="ltr">16:00 - 18:00</td>
               <td class="s10" style="width: 2%;"></td>
-              <td class="s2" dir="ltr" colspan="2">
-                <a href="javascript:void(0)" onclick="openModal('posters')">
+              <td class="s2 clickable-cell" dir="ltr" colspan="2" onclick="openModal('posters')">
                   <h4>Poster session</h4>
-                </a>
               </td>
             </tr>
           </tbody>
@@ -687,21 +629,17 @@
             <tr style="height: 30px">
               <td class="s2" dir="ltr">10:00 - 10:30</td>
               <td class="s4" rowspan="2" style="width: 2%;"></td>
-              <td class="s2" dir="ltr" colspan="2">
-                <a href="javascript:void(0)" onclick="openModal('abstract31')">
+              <td class="s2 clickable-cell" dir="ltr" colspan="2" onclick="openModal('abstract31')">
                   Léo Colisson, Damian Markham and Raja Yehia<br>
                   <strong>All graph state verification protocols are composably secure</strong>
-                </a>
               </td>
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">10:30 - 11:00</td>
-              <td class="s2" dir="ltr" colspan="2">
-                <a href="javascript:void(0)" onclick="openModal('abstract82')">
+              <td class="s2 clickable-cell" dir="ltr" colspan="2" onclick="openModal('abstract82')">
                   Quanlong Wang, Boldizsár Poór and Razin A. Shaikh<br>
                   <strong>Completeness of qufinite ZXW calculus, a graphical language for finite-dimensional quantum
                     theory</strong>
-                </a>
               </td>
             </tr>
             <tr style="height: 15px">
@@ -711,33 +649,25 @@
             <tr style="height: 30px">
               <td class="s2" dir="ltr">11:15 - 11:45</td>
               <td class="s7" rowspan="2" style="width: 2%;"></td>
-              <td class="s2" dir="ltr" style="width: 42%;">
-                <a href="javascript:void(0)" onclick="openModal('abstract26')">
+              <td class="s2 clickable-cell" dir="ltr" style="width: 42%;" onclick="openModal('abstract26')">
                   Martin Avanzini, Georg Moser, Romain Péchoux and Simon Perdrix<br>
                   <strong>On the Hardness of Analyzing Quantum Programs Quantitatively</strong>
-                </a>
               </td>
-              <td class="s2" dir="ltr" style="width: 42%;">
-                <a href="javascript:void(0)" onclick="openModal('abstract125')">
+              <td class="s2 clickable-cell" dir="ltr" style="width: 42%;" onclick="openModal('abstract125')">
                   Jay Owers, Ekaterina Shutova and Martha Lewis<br>
                   <strong>Density Matrices for Metaphor Understanding</strong>
-                </a>
               </td>
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">11:45 - 12:15</td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract98')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract98')">
                   Adrian Lehmann, Ben Caldwell, Bhakti Shah and Robert Rand<br>
                   <strong>VyZX: Formal Verification of a Graphical Quantum Language with automated structural
                     rewrites</strong>
-                </a>
               </td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract91')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract91')">
                   Tuomas Laakkonen, Konstantinos Meichanetzidis and Bob Coecke<br>
                   <strong>Compositional Quantum Algorithms for Text Processing</strong>
-                </a>
               </td>
             </tr>
             <tr style="height: 105px">
@@ -750,22 +680,18 @@
             </tr>
             <tr style="height: 210px;">
               <td class="s2" dir="ltr">15:00 - 18:30</td>
-              <td class="s2" style="background-color: #eee;" dir="ltr" colspan="3">
-                <a href="javascript:void(0)" onclick="openModal('excursion')">
+              <td class="s2 clickable-cell" style="background-color: #eee;" dir="ltr" colspan="3" onclick="openModal('excursion')">
                   <h4>
                   Excursion to Delta de Tigre
                   </h4>
-                </a>
               </td>
             </tr>
             <tr style="height: 240px;">
               <td class="s2" dir="ltr">18:30 - 22:30</td>
-              <td class="s2" style="background-color: #eee;" dir="ltr" colspan="3">
-                <a href="javascript:void(0)" onclick="openModal('excursion')">
+              <td class="s2 clickable-cell" style="background-color: #eee;" dir="ltr" colspan="3" onclick="openModal('excursion')">
                   <h4>
                   Bar at Puerto Madero
                   </h4>
-                </a>
               </td>
             </tr>
           </tbody>
@@ -784,21 +710,17 @@
             <tr style="height: 30px">
               <td class="s2" dir="ltr">10:00 - 10:30</td>
               <td class="s4" rowspan="2" style="width: 2%;"></td>
-              <td class="s2" dir="ltr" colspan="2">
-                <a href="javascript:void(0)" onclick="openModal('abstract93')">
+              <td class="s2 clickable-cell" dir="ltr" colspan="2" onclick="openModal('abstract93')">
                   Tuomas Laakkonen, Konstantinos Meichanetzidis and John van de Wetering<br>
                   <strong>A Graphical #SAT Algorithm for Formulae with Small Clause Density</strong>
-                </a>
               </td>
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">10:30 - 11:00</td>
-              <td class="s2" dir="ltr" colspan="2">
-                <a href="javascript:void(0)" onclick="openModal('abstract108')">
+              <td class="s2 clickable-cell" dir="ltr" colspan="2" onclick="openModal('abstract108')">
                   Pieter Claeys, Austen Lamacraft and Jamie Vicary<br>
                   <strong>From dual-unitary to biunitary: a 2-categorical model for exactly-solvable many-body quantum
                     dynamics</strong>
-                </a>
               </td>
             </tr>
             <tr style="height: 15px">
@@ -808,36 +730,28 @@
             <tr style="height: 30px">
               <td class="s2" dir="ltr">11:15 - 11:45</td>
               <td class="s8" rowspan="2" style="width: 2%;"></td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('tool1')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('tool1')">
                   <h6>Tool presentation</h6>
                   Anurudh Peduri, Tim Bittner, Luca Witt, Luke Southall, Ina
                   Schaefer and Michael Walter<br>
                   <strong>Qubrabench: Quantum Benchmarking without Quantum Computers</strong>
-                </a>
               </td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract121')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract121')">
                   Danilo Fucci and Renato Angelo<br>
                   <strong>Theory-Independent Realism</strong>
-                </a>
               </td>
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">11:45 - 12:15</td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('tool2')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('tool2')">
                   <h6>Tool presentation</h6>
                   Nadish de Silva, Wilfred Salmon and Ming Yin<br>
                   <strong>Fast algorithms for classical specifications of stabiliser states and Clifford gates</strong>
-                </a>
               </td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract73')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract73')">
                   Daniel McNulty, Susane Calegari, Joanna Majsak and Michał Oszmaniec<br>
                   <strong>A Simple and Efficient Joint Measurement Strategy for Estimating Non-Commuting Fermionic
                     Observables and Hamiltonians</strong>
-                </a>
               </td>
             </tr>
             <tr style="height: 105px">
@@ -847,59 +761,45 @@
             <tr style="height: 30px">
               <td class="s2" dir="ltr">14:00 - 14:30</td>
               <td class="s7" rowspan="3" style="width: 2%;"></td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract28')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract28')">
                   Nadish de Silva and Imin Chen<br>
                   <strong>Characterising semi-Clifford gates using algebraic sets</strong>
-                </a>
               </td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract89')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract89')">
                   Samson Abramsky, Rui Soares Barbosa and Amy Searle<br>
                   <strong>Combining Contextuality and Causality: a game semantics approach</strong>
-                </a>
               </td>
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">14:30 - 15:00</td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract59')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract59')">
                   Marco Erba, Paolo Perinotti, Davide Rolino and Alessandro Tosini<br>
                   <strong>A minimalist approach to operational theories</strong>
-                </a>
               </td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract123')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract123')">
                   Stefano Gogioso and Nicola Pinzani<br>
                   <strong>Local fraction in Static Causal Orders</strong>
-                </a>
               </td>
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">15:00 - 15:30</td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract101')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract101')">
                   Matt Wilson and Nick Ormrod<br>
                   <strong>On the Origin of Linearity and Unitarity in Quantum Theory</strong>
-                </a>
               </td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract55')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract55')">
                   Shashaank Khanna, Marina Maciel Ansanelli, Matthew Pusey and Elie Wolfe<br>
                   <strong>Classifying Causal Structures: Ascertaining when Classical Correlations are Constrained by
                     Inequalities</strong>
-                </a>
               </td>
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">15:30 - 16:00</td>
               <td class="s8" rowspan="1" style="width: 2%;"></td>
-              <td class="s2" dir="ltr" colspan="2">
-                <a href="javascript:void(0)" onclick="openModal('industrial')">
+              <td class="s2 clickable-cell" dir="ltr" colspan="2" onclick="openModal('industrial')">
                   <strong>Quantinuum</strong> - Ross Duncan<br>
                   <strong>TII</strong> - Ariel Bendersky<br>
                   <strong>Quandela</strong> - TBA<br>
-                </a>
               </td>
             </tr>
             <tr style="height: 30px">
@@ -917,10 +817,8 @@
             </tr>
             <tr style="height: 150px">
               <td class="s2" dir="ltr">20:00 - 22:30</td>
-              <td class="s2" dir="ltr" colspan="3" style="background-color: #eee;">
-                <a href="javascript:void(0)" onclick="openModal('dinner')">
+              <td class="s2 clickable-cell" dir="ltr" colspan="3" style="background-color: #eee;" onclick="openModal('dinner')">
                   <h4>Conference dinner</h4>
-                </a>
             </tr>
           </tbody>
           <thead>
@@ -938,22 +836,18 @@
             <tr style="height: 30px">
               <td class="s2" dir="ltr">10:00 - 10:30</td>
               <td class="s4" rowspan="2" style="width: 2%;"></td>
-              <td class="s2" dir="ltr" colspan="2">
-                <a href="javascript:void(0)" onclick="openModal('abstract65')">
+              <td class="s2 clickable-cell" dir="ltr" colspan="2" onclick="openModal('abstract65')">
                   Vivien Vandaele<br>
                   <strong>Qubit-count optimization using ZX-calculus</strong>
-                </a>
               </td>
             </tr>
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">10:30 - 11:00</td>
-              <td class="s2" dir="ltr" colspan="2">
-                <a href="javascript:void(0)" onclick="openModal('abstract103')">
+              <td class="s2 clickable-cell" dir="ltr" colspan="2" onclick="openModal('abstract103')">
                   Nicolas Heurtel<br>
                   <strong>A Complete Graphical Language for Linear Optical Circuits with Finite-Photon-Number Sources
                     and Detectors</strong>
-                </a>
               </td>
             </tr>
             <tr style="height: 15px">
@@ -963,33 +857,25 @@
             <tr style="height: 30px">
               <td class="s2" dir="ltr">11:15 - 11:45</td>
               <td class="s7" rowspan="2" style="width: 2%;"></td>
-              <td class="s2" dir="ltr" style="width: 42%;">
-                <a href="javascript:void(0)" onclick="openModal('abstract77')">
+              <td class="s2 clickable-cell" dir="ltr" style="width: 42%;" onclick="openModal('abstract77')">
                   Korbinian Staudacher, Ludwig Schmid, Johannes Zeiher, Robert Wille and Dieter Kranzlmüller<br>
                   <strong>Multi-controlled Phase Gate Synthesis with ZX-calculus applied to Neutral Atoms
                     Hardware</strong>
-                </a>
               </td>
-              <td class="s2" dir="ltr" style="width: 42%;">
-                <a href="javascript:void(0)" onclick="openModal('abstract71')">
+              <td class="s2 clickable-cell" dir="ltr" style="width: 42%;" onclick="openModal('abstract71')">
                   Lorenzo Ceragioli, Fabio Gadducci, Giuseppe Lomurno and Gabriele Tedeschi<br>
                   <strong>Effect Semantics for Quantum Process Calculi</strong>
-                </a>
               </td>
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">11:45 - 12:15</td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract134')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract134')">
                   Giovanni de Felice, Boldizsár Poór and Lia Yeh<br>
                   <strong>Fusion and flow: formal protocols to reliably build photonic graph states</strong>
-                </a>
               </td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract105')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract105')">
                   Amin Karamlou and Nihil Shah<br>
                   <strong>First Steps in Quantum Finite Model Theory</strong>
-                </a>
               </td>
             </tr>
             <tr style="height: 105px">
@@ -999,63 +885,47 @@
             <tr style="height: 30px">
               <td class="s2" dir="ltr">14:00 - 14:30</td>
               <td class="s7" rowspan="4" style="width: 2%;"></td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract131')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract131')">
                   Farid Shahandeh, Theodoros Yianni and Mina Doosti<br>
                   <strong>Contextuality of Cloning via Dimensional Witnesses</strong>
-                </a>
               </td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract38')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract38')">
                   Dichuan Gao<br>
                   <strong>The Qudit ZH Calculus for Arbitrary Finite Fields: Universality and Application</strong>
-                </a>
               </td>
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">14:30 - 15:00</td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract46')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract46')">
                   Samson Abramsky, Serban Cercelescu and Carmen Maria Constantin<br>
                   <strong>Commutation Groups and State-Independent Contextuality</strong>
-                </a>
               </td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract42')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract42')">
                   Matthew Sutcliffe and Aleks Kissinger<br>
                   <strong>Procedurally Optimised ZX-Diagram Cutting for Efficient T-Decomposition in Classical
                     Simulation</strong>
-                </a>
               </td>
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">15:00 - 15:30</td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract48')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract48')">
                   Cihan Okay and Walker Stern<br>
                   <strong>Twisted simplicial distributions</strong>
-                </a>
               </td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract47')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract47')">
                   Robert Booth, Titouan Carette and Cole Comfort<br>
                   <strong>A graphical language for Gaussian quantum processes</strong>
-                </a>
               </td>
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">15:30 - 16:00</td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract74')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract74')">
                   Boseong Kim and Samson Abramsky<br>
                   <strong>State Independence of Quantum Contextuality on a Pauli Abelian Partial Group</strong>
-                </a>
               </td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract36')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract36')">
                   Piotr Mitosek<br>
                   <strong>Pauli flow on open graphs with unknown measurement labels</strong>
-                </a>
               </td>
             </tr>
             <tr style="height: 30px">
@@ -1065,48 +935,35 @@
             <tr style="height: 30px">
               <td class="s2" dir="ltr">16:30 - 17:00</td>
               <td class="s7" rowspan="3" style="width: 2%;"></td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract129')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract129')">
                   Lorenzo Giannelli and Giulio Chiribella<br>
                   <strong>Information-theoretic derivation of energy and speed bounds</strong>
-                </a>
               </td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract40')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract40')">
                   Jacopo Surace<br>
                   <strong>A theory of Inaccessible Information</strong>
-                </a>
-                </a>
               </td>
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">17:00 - 17:30</td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract76')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract76')">
                   Albert Aloy, Thomas Galley, Caroline Jones, Stefan Ludescher and Markus Müller<br>
                   <strong>Spin-bounded correlations: rotation boxes within and beyond quantum theory</strong>
-                </a>
               </td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract119')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract119')">
                   Tatsuki Odake, Hlér Kristjánsson, Philip Taranto and Mio Murao<br>
                   <strong>Universal algorithm for transforming Hamiltonian eigenvalues</strong>
-                </a>
               </td>
             </tr>
             <tr style="height: 30px">
               <td class="s2" dir="ltr">17:30 - 18:00</td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract4')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract4')">
                   Eleftherios Tselentis and Ämin Baumeler<br>
                   <strong>The Mobius game and other Bell test for relativity</strong>
-                </a>
               </td>
-              <td class="s2" dir="ltr">
-                <a href="javascript:void(0)" onclick="openModal('abstract19')">
+              <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract19')">
                   Satoshi Yoshida, Akihito Soeda and Mio Murao<br>
                   <strong>Optimal protocols for universal adjointation of isometry operations</strong>
-                </a>
               </td>
             </tr>
           </tbody>
