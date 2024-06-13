@@ -70,41 +70,6 @@
     }
   </style>
 
-  <!-- <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const collapsibleTable = document.getElementById('collapsible-table');
-      const theads = collapsibleTable.querySelectorAll('thead');
-      const tbodies = collapsibleTable.querySelectorAll('tbody');
-      const toggleAllButton = document.getElementById('toggle-all');
-      let allExpanded = true;
-
-      // Initially hide all tbody elements in the collapsible table
-      // tbodies.forEach(tbody => {
-      //   tbody.style.display = 'none';
-      // });
-
-      // Toggle the display of tbody when thead is clicked in the collapsible table
-      theads.forEach(thead => {
-        thead.addEventListener('click', function () {
-          const nextTbody = thead.nextElementSibling;
-          if (nextTbody && nextTbody.tagName.toLowerCase() === 'tbody') {
-            nextTbody.style.display = nextTbody.style.display === 'none' ? 'table-row-group' : 'none';
-          }
-        });
-      });
-
-      // Toggle all tbody elements and button class/text when the button is clicked
-      toggleAllButton.addEventListener('click', function () {
-        allExpanded = !allExpanded;
-        tbodies.forEach(tbody => {
-          tbody.style.display = allExpanded ? 'table-row-group' : 'none';
-        });
-        toggleAllButton.textContent = allExpanded ? 'Hide all the days' : 'Expand all the days';
-        toggleAllButton.className = allExpanded ? 'button alt' : 'button special';
-      });
-    });
-  </script> -->
-
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const collapsibleTable = document.getElementById('collapsible-table');
@@ -243,7 +208,7 @@
 
         <div style='display:none' id='schedule'>
           <br>
-          <table class="waffle" cellspacing="0" cellpadding="0">
+          <table class="waffle" style="border-collapse: collapse; border-spacing: 0;">
             <thead>
               <tr>
                 <td class="s0" dir="ltr" style="width: 10%;">Time</td>
