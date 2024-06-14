@@ -17,13 +17,111 @@
   <link rel="stylesheet" href="assets/css/cronograma.css">
   <LINK rel="icon" type="image/png" href="images/favicon.png">
   <style>
+    .pdf-link {
+      text-decoration: none;
+      color: #0073e6;
+      font-size: 16px;
+      position: relative;
+      display: none;
+    }
+  
+    .pdf-link:hover {
+      text-decoration: none;
+      color: #0056b3;
+    }
+  
+    .pdf-icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+    }
+  
+    .pdf-icon-small {
+      width: 16px;
+      height: 16px;
+      margin-right: 4px;
+    }
+  
+    .table-pdf-link {
+      position: absolute;
+      bottom: 2px;
+      right: 2px;
+    }
+  
+    .pdf-link-modal {
+      text-decoration: none;
+      color: #000;
+      font-size: 16px;
+      margin-top: 10px;
+      text-align: right;
+      /* display: block; */
+    }
+  
+    .pdf-link-modal:hover {
+      text-decoration: none;
+      color: #0073e6;
+    }
+  
+    .pdf-link-modal img {
+      width: 24px;
+      height: 24px;
+      margin-right: 4px;
+      vertical-align: middle;
+      /* Align the image vertically */
+    }
+  
+  
+  
+  
     .clickable-cell {
       cursor: pointer;
+      position: relative;
     }
-
+  
+    /* .pdf-link {
+      position: absolute;
+      bottom: 2px;
+      right: 2px;
+      text-decoration: none;
+    } */
+  
+    /* .pdf-icon-small {
+      width: 18px;
+      height: 18px;
+      margin-right: 4px;
+    }
+  
+    .pdf-link-modal {
+      text-decoration: none;
+      color: #000;
+      font-size: 16px;
+      margin-top: 10px;
+      text-align: right;
+    }
+  
+    .pdf-icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+    }
+  
+    .pdf-link:hover {
+      text-decoration: none;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      border-radius: 5px;
+    }
+  
+    .pdf-link-modal:hover {
+      text-decoration: none;
+      color: #0073e6;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      border-radius: 5px;
+    } */
+  
+  
     .clickable-cell a {
       text-decoration: none;
-    } 
+    }
 
      .clickable-cell a:hover {
       text-decoration: none;
@@ -352,6 +450,9 @@
               <td class="s2 clickable-cell" dir="ltr" colspan="2" onclick="openModal('abstract43')">
                   Zixuan Liu and Giulio Chiribella<br>
                   <strong>Tsirelson bounds for quantum correlations with indefinite causal order</strong>
+                  <a href="abstracts/43.pdf" class="pdf-link table-pdf-link">
+                    <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
+                  </a>
               </td>
             </tr>
             <tr style="height: 15px">
@@ -429,6 +530,9 @@
               <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract13')">
                   Urs Schreiber<br>
                   <strong>Topological Quantum Programming via Linear Homotopy Types</strong>
+                  <a href="abstracts/13.pdf" class="pdf-link table-pdf-link">
+                    <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
+                  </a>
               </td>
             </tr>
             <tr style="height: 30px">
@@ -445,6 +549,9 @@
               <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract75')">
                   Alejandro Díaz-Caro, Gilles Dowek, and Octavio Malherbe<br>
                   <strong>From linear logic to quantum control</strong>
+                  <a href="abstracts/75.pdf" class="pdf-link table-pdf-link">
+                    <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
+                  </a>
               </td>
             </tr>
             <tr style="height: 30px">
@@ -488,6 +595,9 @@
               <td class="s2 clickable-cell" dir="ltr" colspan="2" onclick="openModal('abstract24')">
                   Alexandre Clément, Noé Delorme, and Simon Perdrix<br>
                   <strong>Minimal Equational Theories for Quantum Circuits</strong>
+                  <a href="abstracts/24.pdf" class="pdf-link table-pdf-link">
+                    <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
+                  </a>
               </td>
             </tr>
             <tr style="height: 30px">
@@ -596,6 +706,9 @@
               <td class="s2 clickable-cell" dir="ltr" colspan="2" onclick="openModal('abstract31')">
                   Léo Colisson, Damian Markham, and Raja Yehia<br>
                   <strong>All graph state verification protocols are composably secure</strong>
+                  <a href="abstracts/31.pdf" class="pdf-link table-pdf-link">
+                    <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
+                  </a>
               </td>
             </tr>
             <tr style="height: 30px">
@@ -616,6 +729,9 @@
               <td class="s2 clickable-cell" dir="ltr" style="width: 42%;" onclick="openModal('abstract26')">
                   Martin Avanzini, Georg Moser, Romain Péchoux, and Simon Perdrix<br>
                   <strong>On the Hardness of Analyzing Quantum Programs Quantitatively</strong>
+                  <a href="abstracts/26.pdf" class="pdf-link table-pdf-link">
+                    <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
+                  </a>
               </td>
               <td class="s2 clickable-cell" dir="ltr" style="width: 42%;" onclick="openModal('abstract125')">
                   Jay Owers, Ekaterina Shutova, and Martha Lewis<br>
@@ -685,6 +801,9 @@
                   Pieter Claeys, Austen Lamacraft, and Jamie Vicary<br>
                   <strong>From dual-unitary to biunitary: a 2-categorical model for exactly-solvable many-body quantum
                     dynamics</strong>
+                  <a href="abstracts/108.pdf" class="pdf-link table-pdf-link">
+                    <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
+                  </a>
               </td>
             </tr>
             <tr style="height: 15px">
@@ -698,6 +817,9 @@
                   <h6>Tool presentation</h6>
                   Anurudh Peduri, Tim Bittner, Luca Witt, Luke Southall, Ina Schaefer, and Michael Walter<br>
                   <strong>Qubrabench: Quantum Benchmarking without Quantum Computers</strong>
+                  <a href="abstracts/tool1.pdf" class="pdf-link table-pdf-link">
+                    <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
+                  </a>
               </td>
               <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract121')">
                   Danilo Fucci and Renato Angelo<br>
@@ -727,6 +849,9 @@
               <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract28')">
                   Nadish de Silva and Imin Chen<br>
                   <strong>Characterising semi-Clifford gates using algebraic sets</strong>
+                  <a href="abstracts/28.pdf" class="pdf-link table-pdf-link">
+                    <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
+                  </a>
               </td>
               <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract89')">
                   Samson Abramsky, Rui Soares Barbosa, and Amy Searle<br>
@@ -915,6 +1040,9 @@
               <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract119')">
                   Tatsuki Odake, Hlér Kristjánsson, Philip Taranto, and Mio Murao<br>
                   <strong>Universal algorithm for transforming Hamiltonian eigenvalues</strong>
+                  <a href="abstracts/119.pdf" class="pdf-link table-pdf-link">
+                    <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
+                  </a>
               </td>
             </tr>
             <tr style="height: 30px">
@@ -922,10 +1050,16 @@
               <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract129')">
                   Lorenzo Giannelli and Giulio Chiribella<br>
                   <strong>Information-theoretic derivation of energy and speed bounds</strong>
+                  <a href="abstracts/129.pdf" class="pdf-link table-pdf-link">
+                    <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
+                  </a>
               </td>
               <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract19')">
                   Satoshi Yoshida, Akihito Soeda, and Mio Murao<br>
                   <strong>Optimal protocols for universal adjointation of isometry operations</strong>
+                  <a href="abstracts/19.pdf" class="pdf-link table-pdf-link">
+                    <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
+                  </a>
               </td>
             </tr>
           </tbody>
@@ -1176,6 +1310,12 @@
         al.'s quantum measurement monads now used in the zx-Caclulus, and it provides “dynamic lifting” of measurement
         results as envisioned by the Quipper community.
       </p>
+      <p style="text-align: right;">
+        <a href="abstracts/13.pdf" class="pdf-link pdf-link-modal">
+          <img src="images/pdf-icon.png" alt="PDF">
+          Extended abstract
+        </a>
+      </p>
     </div>
   </div>
   <div id="abstract14" class="modal">
@@ -1241,6 +1381,12 @@
         approximation error &epsi; = &theta;(d<sup>2/n</sup>), where d is the input dimension of the isometry operation
         and n is the number of calls of the isometry operation.
       </p>
+      <p style="text-align: right;">
+        <a href="abstracts/19.pdf" class="pdf-link pdf-link-modal">
+          <img src="images/pdf-icon.png" alt="PDF">
+          Extended abstract
+        </a>
+      </p>
     </div>
   </div>
   <div id="abstract22" class="modal">
@@ -1298,6 +1444,12 @@
         Finally, we also simplify the complete equational theories for quantum circuits with ancillary qubits and/or
         qubit discarding.
       </p>
+      <p style="text-align: right;">
+        <a href="abstracts/24.pdf" class="pdf-link pdf-link-modal">
+          <img src="images/pdf-icon.png" alt="PDF">
+          Extended abstract
+        </a>
+      </p>
     </div>
   </div>
   <div id="abstract26" class="modal">
@@ -1317,6 +1469,12 @@
         that the quantitative problem, which consists in finding an upper-bound to the pre-expectation, can be decided
         in time double-exponential in the size of a program. Finally, we sketch how the latter can be transformed into
         an efficient synthesis method.
+      </p>
+      <p style="text-align: right;">
+        <a href="abstracts/26.pdf" class="pdf-link pdf-link-modal">
+          <img src="images/pdf-icon.png" alt="PDF">
+          Extended abstract
+        </a>
       </p>
     </div>
   </div>
@@ -1342,6 +1500,12 @@
         corresponding to the sets of third-level Clifford hierarchy gates and third-level semi-Clifford gates. We then
         show that the two algebraic sets resulting from reducing these schemes modulo d share the same set of rational
         points.
+      </p>
+      <p style="text-align: right;">
+        <a href="abstracts/28.pdf" class="pdf-link pdf-link-modal">
+          <img src="images/pdf-icon.png" alt="PDF">
+          Extended abstract
+        </a>
       </p>
     </div>
   </div>
@@ -1395,6 +1559,12 @@
         independent interest. We derive our results using the scalable ZX-calculus formalism, providing one of the first
         application of this formalism to cryptography.
       </p>
+      <p style="text-align: right;">
+        <a href="abstracts/31.pdf" class="pdf-link pdf-link-modal">
+          <img src="images/pdf-icon.png" alt="PDF">
+          Extended abstract
+        </a>
+      </p>
     </div>
   </div>
   <div id="abstract33" class="modal">
@@ -1433,6 +1603,12 @@
         causal inequalities can be achieved by a new type of processes that allow for information to flow in an
         indefinite direction within the parties' laboratories. In the classification of the possible correlations, these
         processes play a similar role as the no-signalling processes in Bell scenarios.
+      </p>
+      <p style="text-align: right;">
+        <a href="abstracts/43.pdf" class="pdf-link pdf-link-modal">
+          <img src="images/pdf-icon.png" alt="PDF">
+          Extended abstract
+        </a>
       </p>
     </div>
   </div>
@@ -1723,6 +1899,12 @@
         vectors, and measurement-free quantum programs. We then introduce a new logical connective, sup, to express
         superposition and measurement. Finally, we model this non-deterministic proof-language for IMALL in the category
         of semimodules over a semiring.
+      </p>
+      <p style="text-align: right;">
+        <a href="abstracts/75.pdf" class="pdf-link pdf-link-modal">
+          <img src="images/pdf-icon.png" alt="PDF">
+          Extended abstract
+        </a>
       </p>
     </div>
   </div>
@@ -2027,6 +2209,12 @@
         states to these biunitary circuits, which are shown to result in maximal entanglement growth and exact
         thermalization after finitely many time steps under biunitary circuit dynamics.
       </p>
+      <p style="text-align: right;">
+        <a href="abstracts/108.pdf" class="pdf-link pdf-link-modal">
+          <img src="images/pdf-icon.png" alt="PDF">
+          Extended abstract
+        </a>
+      </p>
     </div>
   </div>
   <div id="abstract113" class="modal">
@@ -2096,6 +2284,12 @@
         for the negative-time dynamics, we present a universal algorithm to transform positive-time to negative-time
         dynamics without adding an auxiliary qubit, which could also be of standalone interest.
       </p>
+      <p style="text-align: right;">
+        <a href="abstracts/119.pdf" class="pdf-link pdf-link-modal">
+          <img src="images/pdf-icon.png" alt="PDF">
+          Extended abstract
+        </a>
+      </p>
     </div>
   </div>
   <div id="abstract121" class="modal">
@@ -2146,6 +2340,12 @@
         correspondence with the generator of the dynamics, and quantitatively related to the speed of state changes. Our
         results provide an information-theoretic reconstruction of the Mandelstam-Tamm bound on the speed of quantum
         evolutions, thus establishing a bridge between dynamical and information-theoretic notions.
+      </p>
+      <p style="text-align: right;">
+        <a href="abstracts/129.pdf" class="pdf-link pdf-link-modal">
+          <img src="images/pdf-icon.png" alt="PDF">
+          Extended abstract
+        </a>
       </p>
     </div>
   </div>
@@ -2543,6 +2743,12 @@
 
         This enables users to gain insights into when and where they could expect quantum speedups for their
         state-of-the-art algorithms and heuristics.
+      </p>
+      <p style="text-align: right;">
+        <a href="abstracts/tool1.pdf" class="pdf-link pdf-link-modal">
+          <img src="images/pdf-icon.png" alt="PDF">
+          Extended abstract
+        </a>
       </p>
     </div>
   </div>
