@@ -17,19 +17,6 @@
   <link rel="stylesheet" href="assets/css/cronograma.css">
   <LINK rel="icon" type="image/png" href="images/favicon.png">
   <style>
-    .pdf-link {
-      text-decoration: none;
-      color: #0073e6;
-      font-size: 16px;
-      position: relative;
-      display: none;
-    }
-  
-    .pdf-link:hover {
-      text-decoration: none;
-      color: #0056b3;
-    }
-  
     .pdf-icon {
       width: 24px;
       height: 24px;
@@ -39,13 +26,11 @@
     .pdf-icon-small {
       width: 16px;
       height: 16px;
-      margin-right: 4px;
-    }
-  
-    .table-pdf-link {
       position: absolute;
       bottom: 2px;
       right: 2px;
+      /* To hide it: */
+      display: none;
     }
   
     .pdf-link-modal {
@@ -54,7 +39,9 @@
       font-size: 16px;
       margin-top: 10px;
       text-align: right;
-      /* display: block; */
+      position: relative;
+      /* To hide it: */
+      display: none;
     }
   
     .pdf-link-modal:hover {
@@ -67,10 +54,7 @@
       height: 24px;
       margin-right: 4px;
       vertical-align: middle;
-      /* Align the image vertically */
     }
-  
-  
   
   
     .clickable-cell {
@@ -379,8 +363,7 @@
     <div class="inner">
       <header class="major special">
         <h4>Detailed program</h4>
-        <button id="toggle-all" class="button alt">Hide all the days</button><br>
-        Click on each day to view its details.
+        <button id="toggle-all" class="button alt">Hide all the days</button>
       </header>
       <div class="ritz grid-container" dir="ltr">
         <table class="waffle" cellspacing="0" cellpadding="0" id="collapsible-table">
@@ -409,9 +392,7 @@
               <td class="s2 clickable-cell" dir="ltr" colspan="2" onclick="openModal('abstract43')">
                   Zixuan Liu and Giulio Chiribella<br>
                   <strong>Tsirelson bounds for quantum correlations with indefinite causal order</strong>
-                  <a href="abstracts/43.pdf" class="pdf-link table-pdf-link">
-                    <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
-                  </a>
+                  <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
               </td>
             </tr>
             <tr style="height: 15px">
@@ -424,6 +405,7 @@
               <td class="s2 clickable-cell" dir="ltr" style="width: 42%;" onclick="openModal('abstract104')">
                   Hector Bombin, Daniel Litinski, Naomi Nickerson, Fernando Pastawski, and Sam Roberts<br>
                   <strong>Unifying flavors of fault tolerance with the ZX calculus</strong>
+                  <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
               </td>
               <td class="s2 clickable-cell" dir="ltr" style="width: 42%;" onclick="openModal('abstract8')">
                   Maarten Grothus and V. Vilasini<br>
@@ -436,10 +418,12 @@
               <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract25')">
                   Aleks Kissinger and John van de Wetering<br>
                   <strong>Scalable spider nests (...or how to graphically grok transversal non-Clifford gates)</strong>
+                  <img src="images/proceedings-small.png" alt="PDF" class="pdf-icon-small">
               </td>
               <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract107')">
                   Kathleen Barsse, Paolo Perinotti, Alessandro Tosini, and Leonardo Vaglini<br>
                   <strong>Causal influence versus signalling for interacting quantum channels</strong>
+                  <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
               </td>
             </tr>
             <tr style="height: 105px">
@@ -467,9 +451,7 @@
               <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract14')">
                   Robert Allen and Dominic Verdon<br>
                   <strong>CP-infinity and beyond: 2-categorical dilation theory</strong>
-                  <a href="abstracts/14.pdf" class="pdf-link table-pdf-link">
-                    <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
-                  </a>
+                  <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
               </td>
             </tr>
             <tr style="height: 30px">
@@ -492,9 +474,7 @@
               <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract13')">
                   Urs Schreiber<br>
                   <strong>Topological Quantum Programming via Linear Homotopy Types</strong>
-                  <a href="abstracts/13.pdf" class="pdf-link table-pdf-link">
-                    <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
-                  </a>
+                  <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
               </td>
             </tr>
             <tr style="height: 30px">
@@ -511,9 +491,7 @@
               <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract75')">
                   Alejandro Díaz-Caro, Gilles Dowek, and Octavio Malherbe<br>
                   <strong>From linear logic to quantum control</strong>
-                  <a href="abstracts/75.pdf" class="pdf-link table-pdf-link">
-                    <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
-                  </a>
+                  <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
               </td>
             </tr>
             <tr style="height: 30px">
@@ -536,9 +514,7 @@
               <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract3')">
                   Emmanuel Hainry, Romain Péchoux, and Mário Silva<br>
                   <strong>A Programming Language Characterizing Quantum Polynomial Time</strong>
-                  <a href="abstracts/3.pdf" class="pdf-link table-pdf-link">
-                    <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
-                  </a>
+                  <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
               </td>
             </tr>
           </tbody>
@@ -560,9 +536,7 @@
               <td class="s2 clickable-cell" dir="ltr" colspan="2" onclick="openModal('abstract24')">
                   Alexandre Clément, Noé Delorme, and Simon Perdrix<br>
                   <strong>Minimal Equational Theories for Quantum Circuits</strong>
-                  <a href="abstracts/24.pdf" class="pdf-link table-pdf-link">
-                    <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
-                  </a>
+                  <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
               </td>
             </tr>
             <tr style="height: 30px">
@@ -570,6 +544,7 @@
               <td class="s2 clickable-cell" dir="ltr" colspan="2" onclick="openModal('abstract37')">
                   Andrew N. Glaudell, Neil J. Ross, John van de Wetering, and Lia Yeh<br>
                   <strong>Exact Synthesis of Multiqutrit Clifford-cyclotomic Circuits</strong>
+                  <img src="images/proceedings-small.png" alt="PDF" class="pdf-icon-small">
               </td>
             </tr>
             <tr style="height: 15px">
@@ -628,6 +603,7 @@
               <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract34')">
                   Matthew Amy, Neil J. Ross, and Scott Wesley<br>
                   <strong>A Sound and Complete Equational Theory for 3-qubit Toffoli-Hadamard Circuits</strong>
+                  <img src="images/proceedings-small.png" alt="PDF" class="pdf-icon-small">
               </td>
             </tr>
             <tr style="height: 30px">
@@ -671,9 +647,7 @@
               <td class="s2 clickable-cell" dir="ltr" colspan="2" onclick="openModal('abstract31')">
                   Léo Colisson, Damian Markham, and Raja Yehia<br>
                   <strong>All graph state verification protocols are composably secure</strong>
-                  <a href="abstracts/31.pdf" class="pdf-link table-pdf-link">
-                    <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
-                  </a>
+                  <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
               </td>
             </tr>
             <tr style="height: 30px">
@@ -694,13 +668,12 @@
               <td class="s2 clickable-cell" dir="ltr" style="width: 42%;" onclick="openModal('abstract26')">
                   Martin Avanzini, Georg Moser, Romain Péchoux, and Simon Perdrix<br>
                   <strong>On the Hardness of Analyzing Quantum Programs Quantitatively</strong>
-                  <a href="abstracts/26.pdf" class="pdf-link table-pdf-link">
-                    <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
-                  </a>
+                  <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
               </td>
               <td class="s2 clickable-cell" dir="ltr" style="width: 42%;" onclick="openModal('abstract125')">
                   Jay Owers, Ekaterina Shutova, and Martha Lewis<br>
                   <strong>Density Matrices for Metaphor Understanding</strong>
+                  <img src="images/proceedings-small.png" alt="PDF" class="pdf-icon-small">
               </td>
             </tr>
             <tr style="height: 30px">
@@ -709,10 +682,12 @@
                   Adrian Lehmann, Ben Caldwell, Bhakti Shah, and Robert Rand<br>
                   <strong>VyZX: Formal Verification of a Graphical Quantum Language with automated structural
                     rewrites</strong>
+                    <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
               </td>
               <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract91')">
                   Tuomas Laakkonen, Konstantinos Meichanetzidis, and Bob Coecke<br>
                   <strong>Compositional Quantum Algorithms for Text Processing</strong>
+                  <img src="images/proceedings-small.png" alt="PDF" class="pdf-icon-small">
               </td>
             </tr>
             <tr style="height: 105px">
@@ -758,6 +733,7 @@
               <td class="s2 clickable-cell" dir="ltr" colspan="2" onclick="openModal('abstract93')">
                   Tuomas Laakkonen, Konstantinos Meichanetzidis, and John van de Wetering<br>
                   <strong>A Graphical #SAT Algorithm for Formulae with Small Clause Density</strong>
+                  <img src="images/proceedings-small.png" alt="PDF" class="pdf-icon-small">
               </td>
             </tr>
             <tr style="height: 30px">
@@ -766,9 +742,7 @@
                   Pieter Claeys, Austen Lamacraft, and Jamie Vicary<br>
                   <strong>From dual-unitary to biunitary: a 2-categorical model for exactly-solvable many-body quantum
                     dynamics</strong>
-                  <a href="abstracts/108.pdf" class="pdf-link table-pdf-link">
-                    <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
-                  </a>
+                  <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
               </td>
             </tr>
             <tr style="height: 15px">
@@ -782,9 +756,7 @@
                   <h6>Tool presentation</h6>
                   Anurudh Peduri, Tim Bittner, Luca Witt, Luke Southall, Ina Schaefer, and Michael Walter<br>
                   <strong>Qubrabench: Quantum Benchmarking without Quantum Computers</strong>
-                  <a href="abstracts/tool1.pdf" class="pdf-link table-pdf-link">
-                    <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
-                  </a>
+                  <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
               </td>
               <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract121')">
                   Danilo Fucci and Renato Angelo<br>
@@ -814,9 +786,7 @@
               <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract28')">
                   Nadish de Silva and Imin Chen<br>
                   <strong>Characterising semi-Clifford gates using algebraic sets</strong>
-                  <a href="abstracts/28.pdf" class="pdf-link table-pdf-link">
-                    <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
-                  </a>
+                  <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
               </td>
               <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract89')">
                   Samson Abramsky, Rui Soares Barbosa, and Amy Searle<br>
@@ -828,6 +798,7 @@
               <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract59')">
                   Marco Erba, Paolo Perinotti, Davide Rolino, and Alessandro Tosini<br>
                   <strong>A minimalist approach to operational theories</strong>
+                  <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
               </td>
               <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract123')">
                   Stefano Gogioso and Nicola Pinzani<br>
@@ -913,10 +884,12 @@
                   Korbinian Staudacher, Ludwig Schmid, Johannes Zeiher, Robert Wille, and Dieter Kranzlmüller<br>
                   <strong>Multi-controlled Phase Gate Synthesis with ZX-calculus applied to Neutral Atoms
                     Hardware</strong>
+                  <img src="images/proceedings-small.png" alt="PDF" class="pdf-icon-small">
               </td>
               <td class="s2 clickable-cell" dir="ltr" style="width: 42%;" onclick="openModal('abstract71')">
                   Lorenzo Ceragioli, Fabio Gadducci, Giuseppe Lomurno, and Gabriele Tedeschi<br>
                   <strong>Effect Semantics for Quantum Process Calculi</strong>
+                  <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
               </td>
             </tr>
             <tr style="height: 30px">
@@ -956,6 +929,7 @@
                   Matthew Sutcliffe and Aleks Kissinger<br>
                   <strong>Procedurally Optimised ZX-Diagram Cutting for Efficient T-Decomposition in Classical
                     Simulation</strong>
+                  <img src="images/proceedings-small.png" alt="PDF" class="pdf-icon-small">
               </td>
             </tr>
             <tr style="height: 30px">
@@ -978,6 +952,7 @@
               <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract36')">
                   Piotr Mitosek<br>
                   <strong>Pauli flow on open graphs with unknown measurement labels</strong>
+                  <img src="images/proceedings-small.png" alt="PDF" class="pdf-icon-small">
               </td>
             </tr>
             <tr style="height: 30px">
@@ -1005,9 +980,7 @@
               <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract119')">
                   Tatsuki Odake, Hlér Kristjánsson, Philip Taranto, and Mio Murao<br>
                   <strong>Universal algorithm for transforming Hamiltonian eigenvalues</strong>
-                  <a href="abstracts/119.pdf" class="pdf-link table-pdf-link">
-                    <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
-                  </a>
+                  <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
               </td>
             </tr>
             <tr style="height: 30px">
@@ -1015,16 +988,12 @@
               <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract129')">
                   Lorenzo Giannelli and Giulio Chiribella<br>
                   <strong>Information-theoretic derivation of energy and speed bounds</strong>
-                  <a href="abstracts/129.pdf" class="pdf-link table-pdf-link">
-                    <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
-                  </a>
+                  <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
               </td>
               <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract19')">
                   Satoshi Yoshida, Akihito Soeda, and Mio Murao<br>
                   <strong>Optimal protocols for universal adjointation of isometry operations</strong>
-                  <a href="abstracts/19.pdf" class="pdf-link table-pdf-link">
-                    <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
-                  </a>
+                  <img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
               </td>
             </tr>
           </tbody>
@@ -1199,7 +1168,7 @@
         polynomial in the number of input qubits.
       </p>
       <p style="text-align: right;">
-        <a href="abstracts/3.pdf" class="pdf-link pdf-link-modal">
+        <a href="abstracts/3.pdf" class="pdf-link-modal">
           <img src="images/pdf-icon.png" alt="PDF">
           Extended abstract
         </a>
@@ -1282,7 +1251,7 @@
         results as envisioned by the Quipper community.
       </p>
       <p style="text-align: right;">
-        <a href="abstracts/13.pdf" class="pdf-link pdf-link-modal">
+        <a href="abstracts/13.pdf" class="pdf-link-modal">
           <img src="images/pdf-icon.png" alt="PDF">
           Extended abstract
         </a>
@@ -1305,7 +1274,7 @@
         to a characterisation of extremal channels between arbitrary von Neumann algebras.
       </p>
       <p style="text-align: right;">
-        <a href="abstracts/14.pdf" class="pdf-link pdf-link-modal">
+        <a href="abstracts/14.pdf" class="pdf-link-modal">
           <img src="images/pdf-icon.png" alt="PDF">
           Extended abstract
         </a>
@@ -1359,7 +1328,7 @@
         and n is the number of calls of the isometry operation.
       </p>
       <p style="text-align: right;">
-        <a href="abstracts/19.pdf" class="pdf-link pdf-link-modal">
+        <a href="abstracts/19.pdf" class="pdf-link-modal">
           <img src="images/pdf-icon.png" alt="PDF">
           Extended abstract
         </a>
@@ -1422,7 +1391,7 @@
         qubit discarding.
       </p>
       <p style="text-align: right;">
-        <a href="abstracts/24.pdf" class="pdf-link pdf-link-modal">
+        <a href="abstracts/24.pdf" class="pdf-link-modal">
           <img src="images/pdf-icon.png" alt="PDF">
           Extended abstract
         </a>
@@ -1448,7 +1417,7 @@
         an efficient synthesis method.
       </p>
       <p style="text-align: right;">
-        <a href="abstracts/26.pdf" class="pdf-link pdf-link-modal">
+        <a href="abstracts/26.pdf" class="pdf-link-modal">
           <img src="images/pdf-icon.png" alt="PDF">
           Extended abstract
         </a>
@@ -1479,7 +1448,7 @@
         points.
       </p>
       <p style="text-align: right;">
-        <a href="abstracts/28.pdf" class="pdf-link pdf-link-modal">
+        <a href="abstracts/28.pdf" class="pdf-link-modal">
           <img src="images/pdf-icon.png" alt="PDF">
           Extended abstract
         </a>
@@ -1537,7 +1506,7 @@
         application of this formalism to cryptography.
       </p>
       <p style="text-align: right;">
-        <a href="abstracts/31.pdf" class="pdf-link pdf-link-modal">
+        <a href="abstracts/31.pdf" class="pdf-link-modal">
           <img src="images/pdf-icon.png" alt="PDF">
           Extended abstract
         </a>
@@ -1582,7 +1551,7 @@
         processes play a similar role as the no-signalling processes in Bell scenarios.
       </p>
       <p style="text-align: right;">
-        <a href="abstracts/43.pdf" class="pdf-link pdf-link-modal">
+        <a href="abstracts/43.pdf" class="pdf-link-modal">
           <img src="images/pdf-icon.png" alt="PDF">
           Extended abstract
         </a>
@@ -1733,6 +1702,12 @@
         Our results also imply that simpliciality, strong causality and local discriminability represent a minimal set
         of axioms characterizing Classical Theory.
       </p>
+      <p style="text-align: right;">
+        <a href="abstracts/59.pdf" class="pdf-link-modal">
+          <img src="images/pdf-icon.png" alt="PDF">
+          Extended abstract
+        </a>
+      </p>
     </div>
   </div>
   <div id="abstract60" class="modal">
@@ -1878,7 +1853,7 @@
         of semimodules over a semiring.
       </p>
       <p style="text-align: right;">
-        <a href="abstracts/75.pdf" class="pdf-link pdf-link-modal">
+        <a href="abstracts/75.pdf" class="pdf-link-modal">
           <img src="images/pdf-icon.png" alt="PDF">
           Extended abstract
         </a>
@@ -1981,6 +1956,12 @@
         Additionally, we demonstrate deterministic violations and violations with a constant number of measurements for
         the Bell state, relying on operators innate to higher-dimensional systems than the qudit at hand.
       </p>
+      <p style="text-align: right;">
+        <a href="abstracts/85.pdf" class="pdf-link-modal">
+          <img src="images/pdf-icon.png" alt="PDF">
+          Extended abstract
+        </a>
+      </p>
     </div>
   </div>
   <div id="abstract88" class="modal">
@@ -2051,6 +2032,12 @@
         DC⇕AC, a solver to automatically reason about associativity structures built on top of the e-graph solver egg.
         egg performs equivalence saturation with all possible structural rewrites in an efficient manner. We incorporate
         egg into VyZX to allow easy rewriting with the rules of the ZX-calculus.
+      </p>
+      <p style="text-align: right;">
+        <a href="abstracts/98.pdf" class="pdf-link-modal">
+          <img src="images/pdf-icon.png" alt="PDF">
+          Extended abstract
+        </a>
       </p>
     </div>
   </div>
@@ -2129,6 +2116,12 @@
         way to transferring progress among the different views of stabilizer fault-tolerance and help researchers
         familiar with one model easily understand others.
       </p>
+      <p style="text-align: right;">
+        <a href="abstracts/104.pdf" class="pdf-link-modal">
+          <img src="images/pdf-icon.png" alt="PDF">
+          Extended abstract
+        </a>
+      </p>
     </div>
   </div>
   <div id="abstract105" class="modal">
@@ -2165,6 +2158,12 @@
         computation of the two quantities for the Cnot gate. Finally we show a continuity theorem for causal effects of
         unitary channels: a channel has small causal influence iff it allows for small signalling.
       </p>
+      <p style="text-align: right;">
+        <a href="abstracts/107.pdf" class="pdf-link-modal">
+          <img src="images/pdf-icon.png" alt="PDF">
+          Extended abstract
+        </a>
+      </p>
     </div>
   </div>
   <div id="abstract108" class="modal">
@@ -2187,7 +2186,7 @@
         thermalization after finitely many time steps under biunitary circuit dynamics.
       </p>
       <p style="text-align: right;">
-        <a href="abstracts/108.pdf" class="pdf-link pdf-link-modal">
+        <a href="abstracts/108.pdf" class="pdf-link-modal">
           <img src="images/pdf-icon.png" alt="PDF">
           Extended abstract
         </a>
@@ -2262,7 +2261,7 @@
         dynamics without adding an auxiliary qubit, which could also be of standalone interest.
       </p>
       <p style="text-align: right;">
-        <a href="abstracts/119.pdf" class="pdf-link pdf-link-modal">
+        <a href="abstracts/119.pdf" class="pdf-link-modal">
           <img src="images/pdf-icon.png" alt="PDF">
           Extended abstract
         </a>
@@ -2319,7 +2318,7 @@
         evolutions, thus establishing a bridge between dynamical and information-theoretic notions.
       </p>
       <p style="text-align: right;">
-        <a href="abstracts/129.pdf" class="pdf-link pdf-link-modal">
+        <a href="abstracts/129.pdf" class="pdf-link-modal">
           <img src="images/pdf-icon.png" alt="PDF">
           Extended abstract
         </a>
@@ -2467,6 +2466,12 @@
         picture of CSS codes, developed in the first "grokking" paper, to give a simple chacterisation of the set of all
         transversal diagonal gates at the third level of the Clifford hierarchy implementable in an arbitrary CSS code.
       </p>
+      <p style="text-align: right;">
+        <a href="https://forthcoming.eptcs.org/" target="_blank" class="pdf-link-modal">
+          <img src="images/proceedings.png" alt="PDF">
+          To appear at EPTCS
+        </a>
+      </p>
     </div>
   </div>
   <div id="abstract34" class="modal">
@@ -2485,6 +2490,12 @@
         groups of lattices, to obtain a sound and complete collection of equations for Toffoli-K circuits. We then
         extend this equational theory to one for Toffoli-Hadamard circuits by leveraging prior work of Li et al. on
         Toffoli-Hadamard operators.
+      </p>
+      <p style="text-align: right;">
+        <a href="https://forthcoming.eptcs.org/" target="_blank" class="pdf-link-modal">
+          <img src="images/proceedings.png" alt="PDF">
+          To appear at EPTCS
+        </a>
       </p>
     </div>
   </div>
@@ -2510,6 +2521,12 @@
         adjacency matrix. We also use this interpretation to show that the number of output qubits can always be reduced
         to match the number of input qubits while preserving the existence of flow.
       </p>
+      <p style="text-align: right;">
+        <a href="https://forthcoming.eptcs.org/" target="_blank" class="pdf-link-modal">
+          <img src="images/proceedings.png" alt="PDF">
+          To appear at EPTCS
+        </a>
+      </p>
     </div>
   </div>
   <div id="abstract37" class="modal">
@@ -2529,6 +2546,12 @@
         &gt; 1. We then prove that a 3<sup>n</sup> &times; 3<sup>n</sup> unitary matrix U can be represented by an
         n-qutrit circuit over the Clifford-cyclotomic gate set of order 3<sup>k</sup> if and only if the entries of U
         lie in the ring Z[1/3, &omega;k].
+      </p>
+      <p style="text-align: right;">
+        <a href="https://forthcoming.eptcs.org/" target="_blank" class="pdf-link-modal">
+          <img src="images/proceedings.png" alt="PDF">
+          To appear at EPTCS
+        </a>
       </p>
     </div>
   </div>
@@ -2577,6 +2600,12 @@
         and show consistent improvements of orders of magnitude, with an effective efficiency
         0.1&nbsp;&lesssim;&nbsp;&alpha;&nbsp;&lesssim;&nbsp;0.2.
       </p>
+      <p style="text-align: right;">
+        <a href="https://forthcoming.eptcs.org/" target="_blank" class="pdf-link-modal">
+          <img src="images/proceedings.png" alt="PDF">
+          To appear at EPTCS
+        </a>
+      </p>
     </div>
   </div>
   <div id="abstract71" class="modal">
@@ -2586,6 +2615,12 @@
       <h4>Effect Semantics for Quantum Process Calculi</h4>
       <p style="text-align: justify;">
         Along with the development of quantum communication protocols, quantum extensions of process calculi have been explored for modelling communicating systems featuring both non-determinism and quantum capabilities. However, recent works have shown that it is surprisingly difficult to define a behavioural equivalence that matches the observational properties prescribed by quantum theory. Moreover, the two proposals explicitly addressing this issue, namely qCCS and lqCCS, do not define an algorithm for deciding equivalence: in order to equate two processes, one has to compare their behaviour under any possible input state. We introduce a new semantic model based on effects, i.e. probabilistic predicates on quantum states that represent their observable properties. We define and investigate the properties of effect distributions and effect labelled transition systems (eLTS), generalizing probability distributions and probabilistic labelled transition systems (pLTS), respectively. We give an eLTS-based semantics for a minimal quantum process calculus, featuring concurrent and non-deterministic behaviour, quantum measurements and unitaries. We give a behavioural equivalence in the form of a bisimilarity relation, and we prove it sound and complete with respect to the purely probabilistic observable behaviour of quantum processes. To the best of our knowledge, ours is the first algorithmically verifiable proposal that abides to the properties of quantum theory.
+      </p>
+      <p style="text-align: right;">
+        <a href="abstracts/71.pdf" class="pdf-link-modal">
+          <img src="images/pdf-icon.png" alt="PDF">
+          Extended abstract
+        </a>
       </p>
       </div>
   </div>
@@ -2617,6 +2652,12 @@
         Our results show possible advantages for current state-of-the-art hardware and represent the first exact
         synthesis algorithm supporting arbitrary-sized multi-controlled phase gates.
       </p>
+      <p style="text-align: right;">
+        <a href="https://forthcoming.eptcs.org/" target="_blank" class="pdf-link-modal">
+          <img src="images/proceedings.png" alt="PDF">
+          To appear at EPTCS
+        </a>
+      </p>
     </div>
   </div>
   <div id="abstract91" class="modal">
@@ -2637,6 +2678,12 @@
         syntactic structure to form a quantum circuit representation of the semantics of a text. We identify various
         natural language processing tasks that can be solved in a model-native way, and, finally, we envision NISQ
         implementations on near-term quantum processors.
+      </p>
+      <p style="text-align: right;">
+        <a href="https://forthcoming.eptcs.org/" target="_blank" class="pdf-link-modal">
+          <img src="images/proceedings.png" alt="PDF">
+          To appear at EPTCS
+        </a>
       </p>
     </div>
   </div>
@@ -2666,6 +2713,12 @@
         graphical reasoning can lead to new algorithmic insights, even outside the domain of quantum computing that the
         calculus was intended for.
       </p>
+      <p style="text-align: right;">
+        <a href="https://forthcoming.eptcs.org/" target="_blank" class="pdf-link-modal">
+          <img src="images/proceedings.png" alt="PDF">
+          To appear at EPTCS
+        </a>
+      </p>
     </div>
   </div>
   <div id="abstract125" class="modal">
@@ -2680,6 +2733,12 @@
         mixtures of word senses. We find that modelling metaphor is significantly more difficult than other kinds of
         lexical ambiguity, but that our best-performing density matrix method outperforms simple baselines as well as
         some neural language models.
+      </p>
+      <p style="text-align: right;">
+        <a href="https://forthcoming.eptcs.org/" target="_blank" class="pdf-link-modal">
+          <img src="images/proceedings.png" alt="PDF">
+          To appear at EPTCS
+        </a>
       </p>
     </div>
   </div>
@@ -2722,7 +2781,7 @@
         state-of-the-art algorithms and heuristics.
       </p>
       <p style="text-align: right;">
-        <a href="abstracts/tool1.pdf" class="pdf-link pdf-link-modal">
+        <a href="abstracts/tool1.pdf" class="pdf-link-modal">
           <img src="images/pdf-icon.png" alt="PDF">
           Extended abstract
         </a>
