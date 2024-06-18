@@ -66,7 +66,7 @@
       text-decoration: none;
     }
 
-    #collapsible-table thead {
+    .collapsible-table thead {
       cursor: pointer;
     }
 
@@ -109,7 +109,7 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      const collapsibleTable = document.getElementById('collapsible-table');
+      const collapsibleTable = document.getElementByClass('collapsible-table');
       const theads = collapsibleTable.querySelectorAll('thead');
       const tbodies = collapsibleTable.querySelectorAll('tbody');
       const toggleAllButton = document.getElementById('toggle-all');
@@ -362,7 +362,7 @@
 	<button id="toggle-all" class="button alt">Hide all the days</button>
       </header>
       <div class="ritz grid-container" dir="ltr">
-	<table class="waffle" cellspacing="0" cellpadding="0" id="collapsible-table">
+	<table class="waffle" style="border-collapse: collapse; padding: 0px;" class="collapsible-table">
 	  <thead>
 	    <tr style="height: 60px;">
 	      <td style="width: 10%;"></td>
@@ -517,7 +517,7 @@
 	    </tr>
 	  </tbody>
 	</table>
-	<table class="waffle" cellspacing="0" cellpadding="0" id="collapsible-table">
+	<table class="waffle" style="border-collapse: collapse; padding: 0px;" class="collapsible-table">
 	  <thead>
 	    <tr style="height: 60px;">
 	      <td style="width: 10%;"></td>
@@ -628,7 +628,7 @@
 	    </tr>
 	  </tbody>
 	</table>
-	<table class="waffle" cellspacing="0" cellpadding="0" id="collapsible-table">
+	<table class="waffle" style="border-collapse: collapse; padding: 0px;" class="collapsible-table">
 	  <thead>
 	    <tr style="height: 60px;">
 	      <td style="width: 10%;"></td>
@@ -716,7 +716,7 @@
 	    </tr>
 	  </tbody>
 	</table>
-	<table class="waffle" cellspacing="0" cellpadding="0" id="collapsible-table">
+	<table class="waffle" style="border-collapse: collapse; padding: 0px;" class="collapsible-table">
 	  <thead>
 	    <tr style="height: 60px;">
 	      <td style="width: 10%;"></td>
@@ -845,7 +845,7 @@
 	    </tr>
 	  </tbody>
 	</table>
-	<table class="waffle" cellspacing="0" cellpadding="0" id="collapsible-table">
+	<table class="waffle" style="border-collapse: collapse; padding: 0px;" class="collapsible-table">
 	  <thead>
 	    <tr style="height: 60px;">
 	      <td style="width: 10%;"></td>
