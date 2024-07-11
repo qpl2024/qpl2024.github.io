@@ -17,6 +17,26 @@
   <link rel="stylesheet" href="assets/css/cronograma.css">
   <LINK rel="icon" type="image/png" href="images/favicon.png">
   <style>
+
+     .nowrap {
+       white-space: nowrap;
+     }
+    .room {
+      color: #00f;
+      padding: 2px;
+    }
+    .session-chair {
+      text-align: center;
+      background-color: #f2f2f2;
+      padding: 0px;
+      border-bottom: 1px solid #ccc;
+      border-right: 1px SOLID #000000;
+      font-family: 'Arial';
+      font-size: 10pt;
+      vertical-align: middle;
+      direction: ltr;
+    }
+
     .pdf-icon {
       width: 24px;
       height: 24px;
@@ -265,12 +285,12 @@
 	    </thead>
 	    <tbody>
 	      <tr style="height: 30px">
-		<td class="s2" dir="ltr">9:30 - 10:00</td>
+		<td class="s2 nowrap" dir="ltr">9:30 - 10:00</td>
 		<td class="s11" dir="ltr"><h3 style="all: unset; display: block;">Accreditation</h3></td>
 		<td class="s3" dir="ltr" colspan="5">Breakfast</td>
 	      </tr>
 	      <tr style="height: 30px">
-		<td class="s2" dir="ltr">10:00 - 10:30</td>
+		<td class="s2 nowrap" dir="ltr">10:00 - 10:30</td>
 		<td class="s3" dir="ltr">Breakfast</td>
 		<td class="s4" dir="ltr" rowspan="2">Plenary session</td>
 		<td class="s4" dir="ltr" rowspan="2">Plenary session</td>
@@ -278,7 +298,7 @@
 		<td class="s4" dir="ltr" rowspan="2">Plenary session</td>
 	      </tr>
 	      <tr style="height: 30px">
-		<td class="s2" dir="ltr">10:30 - 11:00</td>
+		<td class="s2 nowrap" dir="ltr">10:30 - 11:00</td>
 		<td class="s4" dir="ltr">Plenary session</td>
 	      </tr>
 	      <tr style="height: 15px">
@@ -286,24 +306,24 @@
 		<td class="s6" dir="ltr" colspan="6" style="line-height: 15px">Short break to change room</td>
 	      </tr>
 	      <tr style="height: 30px">
-		<td class="s2" dir="ltr">11:15 - 11:45</td>
+		<td class="s2  nowrap" dir="ltr">11:15 - 11:45</td>
 		<td class="s7" dir="ltr" rowspan="2" style="width: 18%;">Parallel session</td>
 		<td class="s7" dir="ltr" rowspan="2" style="width: 18%;">Parallel session</td>
 		<td class="s7" dir="ltr" rowspan="2" style="width: 18%;">Parallel session</td>
-		<td class="s7" dir="ltr" style="width: 9%;">Parallel session</td>
-		<td class="s7" dir="ltr" rowspan="2" style="width: 9%;">Parallel session</td>
+		<td class="s7" dir="ltr" colspan="2" style="width: 9%;">Parallel session</td>
 		<td class="s7" dir="ltr" rowspan="2" style="width: 18%;">Parallel session</td>
 	      </tr>
 	      <tr style="height: 30px">
-		<td class="s2" dir="ltr">11:45 - 12:15</td>
-		<td class="s8" dir="ltr" style="width: 9%;">Tool presentation</td>
+		<td class="s2 nowrap" dir="ltr">11:45 - 12:15</td>
+		<td class="s8" dir="ltr" style="width: 9%; border-top: 1px SOLID #d9d2e9; border-right: 1px SOLID #d9d2e9;">Tool presentation</td>
+		<td class="s7" dir="ltr" rowspan="1" style="width: 9%; border-top: 1px SOLID #d9d2e9;"></td>
 	      </tr>
 	      <tr style="height: 105px">
-		<td class="s2" dir="ltr">12:15 - 14:00</td>
+		<td class="s2 nowrap" dir="ltr">12:15 - 14:00</td>
 		<td class="s3" dir="ltr" colspan="6">Lunch</td>
 	      </tr>
 	      <tr style="height: 30px">
-		<td class="s2" dir="ltr">14:00 - 14:30</td>
+		<td class="s2 nowrap" dir="ltr">14:00 - 14:30</td>
 		<td class="s7" dir="ltr" rowspan="4">Parallel session</td>
 		<td class="s7" dir="ltr" rowspan="3">Parallel session</td>
 		<td class="vacio" rowspan="2"></td>
@@ -311,51 +331,52 @@
 		<td class="s7" dir="ltr" rowspan="4">Parallel session</td>
 	      </tr>
 	      <tr style="height: 30px">
-		<td class="s2" dir="ltr">14:30 - 15:00</td>
+		<td class="s2 nowrap" dir="ltr">14:30 - 15:00</td>
 	      </tr>
 	      <tr style="height: 30px">
-		<td class="s2" dir="ltr">15:00 - 15:30</td>
+		<td class="s2 nowrap" dir="ltr">15:00 - 15:30</td>
 		<td class="s9 clickable-cell" dir="ltr" rowspan="7" onclick="openModal('excursion')">
 		  Excursion to Delta de Tigre
 		</td>
 	      </tr>
 	      <tr style="height: 30px">
-		<td class="s2" dir="ltr">15:30 - 16:00</td>
+		<td class="s2 nowrap" dir="ltr">15:30 - 16:00</td>
 		<td class="s3" dir="ltr">Coffee break</td>
-		<td class="s8" dir="ltr" colspan="2">Industrial session</td>
+		<td class="s3" dir="ltr" colspan="2">Coffee break</td>
 	      </tr>
 	      <tr style="height: 30px">
-		<td class="s2" dir="ltr">16:00 - 16:30</td>
+		<td class="s2 nowrap" dir="ltr">16:00 - 16:30</td>
 		<td class="s3" dir="ltr">Coffee break</td>
 		<td class="s10" dir="ltr" rowspan="4">Poster session</td>
-		<td class="s3" dir="ltr" colspan="3">Coffee break</td>
+		<td class="s8" dir="ltr" colspan="2" style="border-bottom: 1px SOLID #d9d2e9;">Industrial session</td>
+		<td class="s3" dir="ltr">Coffee break</td>
 	      </tr>
 	      <tr style="height: 30px">
-		<td class="s2" dir="ltr">16:30 - 17:00</td>
+		<td class="s2 nowrap" dir="ltr">16:30 - 17:00</td>
 		<td class="s7" dir="ltr" rowspan="3">Parallel session</td>
 		<td class="s11" dir="ltr" rowspan="3" colspan="2">QPL General Meeting</td>
 		<td class="s7" dir="ltr" rowspan="3">Parallel session</td>
 	      </tr>
 	      <tr style="height: 30px">
-		<td class="s2" dir="ltr">17:00 - 17:30</td>
+		<td class="s2 nowrap" dir="ltr">17:00 - 17:30</td>
 	      </tr>
 	      <tr style="height: 30px">
-		<td class="s2" dir="ltr">17:30 - 18:00</td>
+		<td class="s2 nowrap" dir="ltr">17:30 - 18:00</td>
 	      </tr>
 	      <tr style="height: 30px">
-		<td class="s2" dir="ltr">18:00 - 18:30</td>
+		<td class="s2 nowrap" dir="ltr">18:00 - 18:30</td>
 		<td class="s12" rowspan="3"></td>
 		<td class="s12" rowspan="3"></td>
 		<td class="s12" rowspan="2" colspan="2"></td>
 		<td class="s12" rowspan="3"></td>
 	      </tr>
 	      <tr style="height: 90px">
-		<td class="s2" dir="ltr">18:30 - 20:00</td>
+		<td class="s2 nowrap" dir="ltr">18:30 - 20:00</td>
 		<td class="s9 clickable-cell" dir="ltr" rowspan="2" onclick="openModal('excursion')">Bar
 		  at Puerto Madero</td>
 	      </tr>
 	      <tr style="height: 150px">
-		<td class="s2" dir="ltr">20:00 - 22:30</td>
+		<td class="s2 nowrap" dir="ltr">20:00 - 22:30</td>
 		<td class="s9 clickable-cell" dir="ltr" colspan="2" onclick="openModal('dinner')">
 		  Conference dinner
 		</td>
@@ -395,9 +416,13 @@
 	      <td class="s2" dir="ltr">10:00 - 10:30</td>
 	      <td class="s3" dir="ltr" colspan="4">Breakfast</td>
 	    </tr>
+	    <tr style="height: 10px">
+	      <td class="s0" style="border-bottom: 1px solid #ccc;"></td>
+	      <td class="s4" rowspan="2" style="width: 2%;"></td>
+	      <td class="session-chair" colspan="2">Session chair: Ana Belen Sainz &bullet; <span class="room">Room: Aula Magna</span></td>
+	    </tr>
 	    <tr style="height: 30px">
 	      <td class="s2" dir="ltr">10:30 - 11:00</td>
-	      <td class="s4" style="width: 2%;"></td>
 	      <td class="s2 clickable-cell" dir="ltr" colspan="2" onclick="openModal('abstract43')">
 		Zixuan Liu and Giulio Chiribella<br>
 		<strong>Tsirelson bounds for quantum correlations with indefinite causal order</strong>
@@ -405,12 +430,17 @@
 	      </td>
 	    </tr>
 	    <tr style="height: 15px">
-	      <td class="s0"></td>
+	      <td class="sshort"></td>
 	      <td class="s6" dir="ltr" colspan="3" style="line-height: 15px">Short break to change room</td>
+	    </tr>
+	    <tr style="height: 10px">
+	      <td class="s0"></td>
+	      <td class="s7" rowspan="3" style="width: 2%;"></td>
+	      <td class="session-chair">Session chair: Simon Perdrix &bullet; <span class="room">Room: 1401</span></td>
+	      <td class="session-chair">Session chair: Ariel Bendersky &bullet; <span class="room">Room: 1402</span></td>
 	    </tr>
 	    <tr style="height: 30px">
 	      <td class="s2" dir="ltr">11:15 - 11:45</td>
-	      <td class="s7" rowspan="2" style="width: 2%;"></td>
 	      <td class="s2 clickable-cell" dir="ltr" style="width: 42%;" onclick="openModal('abstract104')">
 		Hector Bombin, Daniel Litinski, Naomi Nickerson, Fernando Pastawski, and Sam Roberts<br>
 		<strong>Unifying flavors of fault tolerance with the ZX calculus</strong>
@@ -434,6 +464,7 @@
 		Maarten Grothus and V. Vilasini<br>
 		<strong>Characterizing Signalling: Connections between Causal Inference and Space-time
 		  Geometry</strong>
+		<img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
 		<div class="virtual">&#127916;</div>
 	      </td>
 	    </tr>
@@ -441,9 +472,14 @@
 	      <td class="s2" dir="ltr">12:15 - 14:00</td>
 	      <td class="s3" dir="ltr" colspan="3">Lunch</td>
 	    </tr>
+	    <tr style="height: 10px">
+	      <td class="s0"></td>
+	      <td class="s7" rowspan="5" style="width: 2%;"></td>
+	      <td class="session-chair">Session chair: Nadish da Silva &bullet; <span class="room">Room: 1401</span></td>
+	      <td class="session-chair">Session chair: John van de Wetering &bullet; <span class="room">Room: 1402</span></td>
+	    </tr>
 	    <tr style="height: 30px">
 	      <td class="s2" dir="ltr">14:00 - 14:30</td>
-	      <td class="s7" rowspan="4" style="width: 2%;"></td>
 	      <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract106')">
 		Marco Erba, David Schmid, John Selby, and Sina Soltani<br>
 		<strong>A noncontextual ontological model for bilocal classical theory</strong>
@@ -456,9 +492,9 @@
 	    </tr>
 	    <tr style="height: 30px">
 	      <td class="s2" dir="ltr">14:30 - 15:00</td>
-	      <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract17')">
-		Raman Choudhary, Rui Soares Barbosa, and Adán Cabello<br>
-		<strong>Lifting noncontextuality inequalities</strong>
+	      <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract46')">
+		Samson Abramsky, Serban Cercelescu, and Carmen Maria Constantin<br>
+		<strong>Commutation Groups and State-Independent Contextuality</strong>
 	      </td>
 	      <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract14')">
 		Robert Allen and Dominic Verdon<br>
@@ -483,6 +519,7 @@
 	      <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract100')">
 		Amy Searle, Rui Soares Barbosa, and Samson Abramsky<br>
 		<strong>Mapping temporal correlations to contextuality correlations</strong>
+		<img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
 	      </td>
 	      <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract13')">
 		Urs Schreiber<br>
@@ -494,9 +531,14 @@
 	      <td class="s2" dir="ltr">16:00 - 16:30</td>
 	      <td class="s3" dir="ltr" colspan="3">Coffee break</td>
 	    </tr>
+	    <tr style="height: 10px">
+	      <td class="s0"></td>
+	      <td class="s7" rowspan="4" style="width: 2%;"></td>
+	      <td class="session-chair">Session chair: Lorenzo Catani &bullet; <span class="room">Room: 1401</span></td>
+	      <td class="session-chair">Session chair: Frank Fu &bullet; <span class="room">Room: 1402</span></td>
+	    </tr>
 	    <tr style="height: 30px">
 	      <td class="s2" dir="ltr">16:30 - 17:00</td>
-	      <td class="s7" rowspan="3" style="width: 2%;"></td>
 	      <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract85')">
 		Uta Meyer, Ivan Supic, Frédéric Grosshans, and Damian Markham<br>
 		<strong>Bell Nonlocality from Wigner Negativity in Qudit Stabilizer States</strong>
@@ -546,9 +588,13 @@
 	      <td class="s2" dir="ltr" style="width: 10%;">9:30 - 10:00</td>
 	      <td class="s3" dir="ltr" colspan="3">Breakfast</td>
 	    </tr>
+	    <tr style="height: 10px">
+	      <td class="s0" style="border-bottom: 1px solid #ccc;"></td>
+	      <td class="s4" rowspan="3" style="width: 2%;"></td>
+	      <td class="session-chair" colspan="2">Session chair: Aleks Kissinger &bullet; <span class="room">Room: Aula Magna</span></td>
+	    </tr>
 	    <tr style="height: 30px">
 	      <td class="s2" dir="ltr">10:00 - 10:30</td>
-	      <td class="s4" rowspan="2" style="width: 2%;"></td>
 	      <td class="s2 clickable-cell" dir="ltr" colspan="2" onclick="openModal('abstract24')">
 		Alexandre Clément, Noé Delorme, and Simon Perdrix<br>
 		<strong>Minimal Equational Theories for Quantum Circuits</strong>
@@ -564,12 +610,17 @@
 	      </td>
 	    </tr>
 	    <tr style="height: 15px">
-	      <td class="s0"></td>
+	      <td class="sshort"></td>
 	      <td class="s6" dir="ltr" colspan="3" style="line-height: 15px">Short break to change room</td>
+	    </tr>
+	    <tr style="height: 10px">
+	      <td class="s0"></td>
+	      <td class="s7" rowspan="3" style="width: 2%;"></td>
+	      <td class="session-chair">Session chair: Alexandre Clément &bullet; <span class="room">Room: 1401</span></td>
+	      <td class="session-chair">Session chair: TBA &bullet; <span class="room">Room: 1402</span></td>
 	    </tr>
 	    <tr style="height: 30px">
 	      <td class="s2" dir="ltr">11:15 - 11:45</td>
-	      <td class="s7" rowspan="2" style="width: 2%;"></td>
 	      <td class="s2 clickable-cell" dir="ltr" style="width: 42%;" onclick="openModal('abstract113')">
 		Min-Hsiu Hsieh, Leandro Mendes, Michael de Oliveira, and Sathyawageeswar Subramanian<br>
 		<strong>Quantum Circuits surpass Biased Threshold Circuits in Constant-Depth</strong>
@@ -595,9 +646,14 @@
 	      <td class="s2" dir="ltr">12:15 - 14:00</td>
 	      <td class="s3" dir="ltr" colspan="3">Lunch</td>
 	    </tr>
+	    <tr style="height: 10px">
+	      <td class="s0"></td>
+	      <td class="s7" rowspan="4" style="width: 2%;"></td>
+	      <td class="session-chair">Session chair: John Selby &bullet; <span class="room">Room: 1401</span></td>
+	      <td class="session-chair">Session chair: Peter Selinger &bullet; <span class="room">Room: 1402</span></td>
+	    </tr>
 	    <tr style="height: 30px">
 	      <td class="s2" dir="ltr">14:00 - 14:30</td>
-	      <td class="s7" rowspan="3" style="width: 2%;"></td>
 	      <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract51')">
 		Yìlè Yīng, Marina Maciel Ansanelli, Andrea Di Biagio, Elie Wolfe, and Eric Gama Cavalcanti<br>
 		<strong>Relating Wigner's Friend Scenarios to Nonclassical Causal Compatibility, Monogamy Relations,
@@ -635,9 +691,13 @@
 	      <td class="s2" dir="ltr">15:30 - 16:00</td>
 	      <td class="s3" dir="ltr" colspan="3">Coffee break</td>
 	    </tr>
+	    <tr style="height: 10px">
+	      <td class="s0"></td>
+	      <td class="s10" style="width: 2%;" rowspan="2"></td>
+	      <td class="session-chair" colspan="2"><span class="room">Area in front of rooms 1401 and 1402</span></td>
+	    </tr>
 	    <tr style="height: 120px;">
 	      <td class="s2" dir="ltr">16:00 - 18:00</td>
-	      <td class="s10" style="width: 2%;"></td>
 	      <td class="s2 clickable-cell" dir="ltr" colspan="2" onclick="openModal('posters')">
 		<h4>Poster session</h4>
 	      </td>
@@ -655,9 +715,13 @@
 	      <td class="s2" dir="ltr" style="width: 10%;">9:30 - 10:00</td>
 	      <td class="s3" dir="ltr" colspan="3">Breakfast</td>
 	    </tr>
+	    <tr style="height: 10px">
+	      <td class="s0" style="border-bottom: 1px solid #ccc;"></td>
+	      <td class="s4" rowspan="3" style="width: 2%;"></td>
+	      <td class="session-chair" colspan="2">Session chair: Robert Rand &bullet; <span class="room">Room: Aula Magna</span></td>
+	    </tr>
 	    <tr style="height: 30px">
 	      <td class="s2" dir="ltr">10:00 - 10:30</td>
-	      <td class="s4" rowspan="2" style="width: 2%;"></td>
 	      <td class="s2 clickable-cell" dir="ltr" colspan="2" onclick="openModal('abstract31')">
 		Léo Colisson, Damian Markham, and Raja Yehia<br>
 		<strong>All graph state verification protocols are composably secure</strong>
@@ -673,12 +737,17 @@
 	      </td>
 	    </tr>
 	    <tr style="height: 15px">
-	      <td class="s0"></td>
+	      <td class="sshort"></td>
 	      <td class="s6" dir="ltr" colspan="3" style="line-height: 15px">Short break to change room</td>
+	    </tr>
+	    <tr style="height: 10px">
+	      <td class="s0"></td>
+	      <td class="s7" rowspan="3" style="width: 2%;"></td>
+	      <td class="session-chair">Session chair: Ross Duncan &bullet; <span class="room">Room: 1401</span></td>
+	      <td class="session-chair">Session chair: Alejandro Díaz-Caro &bullet; <span class="room">Room: 1402</span></td>
 	    </tr>
 	    <tr style="height: 30px">
 	      <td class="s2" dir="ltr">11:15 - 11:45</td>
-	      <td class="s7" rowspan="2" style="width: 2%;"></td>
 	      <td class="s2 clickable-cell" dir="ltr" style="width: 42%;" onclick="openModal('abstract125')">
 		Jay Owers, Ekaterina Shutova, and Martha Lewis<br>
 		<strong>Density Matrices for Metaphor Understanding</strong>
@@ -711,11 +780,11 @@
 	    </tr>
 	    <tr style="height: 60px">
 	      <td class="s2" dir="ltr">14:00 - 15:00</td>
-	      <td colspan="3" class="s0"></td>
+	      <td colspan="3" class="sshort"></td>
 	    </tr>
 	    <tr style="height: 210px;">
 	      <td class="s2" dir="ltr">15:00 - 18:30</td>
-	      <td class="s2 clickable-cell" style="background-color: #eee;" dir="ltr" colspan="3" onclick="openModal('excursion')">
+	      <td class="s2 clickable-cell" style="background-color: #f2f2f2;" dir="ltr" colspan="3" onclick="openModal('excursion')">
 		<h4>
 		  Excursion to Delta de Tigre
 		</h4>
@@ -723,7 +792,7 @@
 	    </tr>
 	    <tr style="height: 240px;">
 	      <td class="s2" dir="ltr">18:30 - 22:30</td>
-	      <td class="s2 clickable-cell" style="background-color: #eee;" dir="ltr" colspan="3" onclick="openModal('excursion')">
+	      <td class="s2 clickable-cell" style="background-color: #f2f2f2;" dir="ltr" colspan="3" onclick="openModal('excursion')">
 		<h4>
 		  Bar at Puerto Madero
 		</h4>
@@ -742,9 +811,13 @@
 	      <td class="s2" dir="ltr" style="width: 10%;">9:30 - 10:00</td>
 	      <td class="s3" dir="ltr" colspan="3">Breakfast</td>
 	    </tr>
+	    <tr style="height: 10px">
+	      <td class="s0" style="border-bottom: 1px solid #ccc;"></td>
+	      <td class="s4" rowspan="3" style="width: 2%;"></td>
+	      <td class="session-chair" colspan="2">Session chair: TBA &bullet; <span class="room">Room: Aula Magna</span></td>
+	    </tr>
 	    <tr style="height: 30px">
 	      <td class="s2" dir="ltr">10:00 - 10:30</td>
-	      <td class="s4" rowspan="2" style="width: 2%;"></td>
 	      <td class="s2 clickable-cell" dir="ltr" colspan="2" onclick="openModal('abstract93')">
 		Tuomas Laakkonen, Konstantinos Meichanetzidis, and John van de Wetering<br>
 		<strong>A Graphical #SAT Algorithm for Formulae with Small Clause Density</strong>
@@ -760,12 +833,17 @@
 	      </td>
 	    </tr>
 	    <tr style="height: 15px">
-	      <td class="s0"></td>
+	      <td class="sshort"></td>
 	      <td class="s6" dir="ltr" colspan="3" style="line-height: 15px">Short break to change room</td>
+	    </tr>
+	    <tr style="height: 10px">
+	      <td class="s0"></td>
+	      <td class="s7" rowspan="2" style="width: 2%;"></td>
+	      <td class="session-chair">Session chair: Rui Soares Barbosa &bullet; <span class="room">Room: 1401</span></td>
+	      <td class="session-chair">Session chair: Carmen Constantin &bullet; <span class="room">Room: 1402</span></td>
 	    </tr>
 	    <tr style="height: 30px">
 	      <td class="s2" dir="ltr">11:15 - 11:45</td>
-	      <td class="s7" style="width: 2%;"></td>
 	      <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract117')">
 		Nick Ormrod and Jonathan Barrett<br>
 		<strong>Quantum Influences and Event Relativity</strong>
@@ -778,7 +856,7 @@
 	    </tr>
 	    <tr style="height: 30px">
 	      <td class="s2" dir="ltr">11:45 - 12:15</td>
-	      <td class="s8" style="width: 2%;"></td>
+	      <td class="s8" style="width: 2%; border-top: 1px SOLID #d9d2e9;"></td>
 	      <td class="s2 clickable-cell" dir="ltr" onclick="openModal('tool2')">
 		<h6>Tool presentation</h6>
 		Nadish de Silva, Wilfred Salmon, and Ming Yin<br>
@@ -794,9 +872,14 @@
 	      <td class="s2" dir="ltr">12:15 - 14:00</td>
 	      <td class="s3" dir="ltr" colspan="3">Lunch</td>
 	    </tr>
+	    <tr style="height: 10px">
+	      <td class="s0"></td>
+	      <td class="s7" rowspan="4" style="width: 2%;"></td>
+	      <td class="session-chair">Session chair: James Hefford &bullet; <span class="room">Room: 1401</span></td>
+	      <td class="session-chair">Session chair: TBA &bullet; <span class="room">Room: 1402</span></td>
+	    </tr>
 	    <tr style="height: 30px">
 	      <td class="s2" dir="ltr">14:00 - 14:30</td>
-	      <td class="s7" rowspan="3" style="width: 2%;"></td>
 	      <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract28')">
 		Nadish de Silva and Imin Chen<br>
 		<strong>Characterising semi-Clifford gates using algebraic sets</strong>
@@ -805,6 +888,7 @@
 	      <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract89')">
 		Samson Abramsky, Rui Soares Barbosa, and Amy Searle<br>
 		<strong>Combining Contextuality and Causality: a game semantics approach</strong>
+		<img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
 	      </td>
 	    </tr>
 	    <tr style="height: 30px">
@@ -832,20 +916,40 @@
 	    </tr>
 	    <tr style="height: 30px">
 	      <td class="s2" dir="ltr">15:30 - 16:00</td>
-	      <td class="s8" rowspan="1" style="width: 2%;"></td>
-	      <td class="s2 clickable-cell" dir="ltr" colspan="2" onclick="openModal('industrial')">
-		<strong>Quantinuum</strong> - Ross Duncan<br>
-		<strong>TII</strong> - Ariel Bendersky<br>
-		<strong>Quandela</strong> - Shane Mansfield<br>
-	      </td>
+	      <td class="s3" dir="ltr" colspan="3">Coffee break</td>
+	    </tr>
+	    <tr style="height: 10px">
+	      <td class="s0"></td>
+	      <td class="s8" rowspan="2" style="width: 2%; border-bottom: 1px SOLID #d9d2e9;"></td>
+	      <td class="session-chair" colspan="2"><span class="room">Room: 1402</span></td>
 	    </tr>
 	    <tr style="height: 30px">
 	      <td class="s2" dir="ltr">16:00 - 16:30</td>
-	      <td class="s3" dir="ltr" colspan="3">Coffee break</td>
+	      <td class="s2 clickable-cell" dir="ltr" colspan="2" onclick="openModal('industrial')">
+		<h6>Industrial session</h6>
+		<strong>Quantinuum</strong> - Ross Duncan
+		&nbsp;
+		&nbsp;
+		&nbsp;
+		&bullet;
+		&nbsp;
+		&nbsp;
+		&nbsp;
+		<strong>Technology Innovation Institute</strong> - Ariel Bendersky
+		&nbsp;
+		&nbsp;
+		&nbsp;
+		&bullet;
+		&nbsp;
+		&nbsp;
+		&nbsp;
+		<strong>Quandela</strong> - Shane Mansfield<br>
+	      </td>
 	    </tr>
 	    <tr style="height: 90px">
 	      <td class="s2" dir="ltr">16:30 - 18:00</td>
-	      <td class="s2" dir="ltr" colspan="3" style="background-color: #eee;"><h4>QPL General Meeting</h4>
+	      <td class="s11" rowspan="1" style="width: 2%;"></td>
+	      <td class="s2" dir="ltr" colspan="2"><h4>QPL General Meeting</h4>
 	      </td>
 	    </tr>
 	    <tr style="height: 120px">
@@ -854,8 +958,8 @@
 	    </tr>
 	    <tr style="height: 150px">
 	      <td class="s2" dir="ltr">20:00 - 22:30</td>
-	      <td class="s2 clickable-cell" dir="ltr" colspan="3" style="background-color: #eee;" onclick="openModal('dinner')">
-		<h4>Conference dinner</h4>
+	      <td class="s2 clickable-cell" dir="ltr" colspan="3" style="background-color: #f2f2f2;" onclick="openModal('dinner')">
+		<h4>Conference dinner at Galidon</h4>
 	    </tr>
 	  </tbody>
 	  <thead>
@@ -870,28 +974,37 @@
 	      <td class="s2" dir="ltr" style="width: 10%;">9:30 - 10:00</td>
 	      <td class="s3" dir="ltr" colspan="3">Breakfast</td>
 	    </tr>
-	    <tr style="height: 30px">
-	      <td class="s2" dir="ltr">10:00 - 10:30</td>
-	      <td class="s4" rowspan="2" style="width: 2%;"></td>
-	      <td class="s2 clickable-cell" dir="ltr" colspan="2" onclick="openModal('abstract65')">
-		Vivien Vandaele<br>
-		<strong>Qubit-count optimization using ZX-calculus</strong>
-	      </td>
+	    <tr style="height: 10px">
+	      <td class="s0" style="border-bottom: 1px solid #ccc;"></td>
+	      <td class="s4" rowspan="3" style="width: 2%;"></td>
+	      <td class="session-chair" colspan="2">Session chair: Giovanni de Felice &bullet; <span class="room">Room: Aula Magna</span></td>
 	    </tr>
 	    <tr style="height: 30px">
-	      <td class="s2" dir="ltr">10:30 - 11:00</td>
+	      <td class="s2" dir="ltr">10:00 - 10:30</td>
 	      <td class="s2 clickable-cell" dir="ltr" colspan="2" onclick="openModal('abstract103')">
 		Nicolas Heurtel<br>
 		<strong>A Complete Graphical Language for Linear Optical Circuits with Finite-Photon-Number Sources and Detectors</strong>
 	      </td>
 	    </tr>
+	    <tr style="height: 30px">
+	      <td class="s2" dir="ltr">10:30 - 11:00</td>
+	      <td class="s2 clickable-cell" dir="ltr" colspan="2" onclick="openModal('abstract65')">
+		Vivien Vandaele<br>
+		<strong>Qubit-count optimization using ZX-calculus</strong>
+	      </td>
+	    </tr>
 	    <tr style="height: 15px">
-	      <td class="s0"></td>
+	      <td class="sshort"></td>
 	      <td class="s6" dir="ltr" colspan="3" style="line-height: 15px">Short break to change room</td>
+	    </tr>
+	    <tr style="height: 10px">
+	      <td class="s0"></td>
+	      <td class="s7" rowspan="3" style="width: 2%;"></td>
+	      <td class="session-chair">Session chair: Cole Comfort &bullet; <span class="room">Room: 1401</span></td>
+	      <td class="session-chair">Session chair: Romain Péchoux &bullet; <span class="room">Room: 1402</span></td>
 	    </tr>
 	    <tr style="height: 30px">
 	      <td class="s2" dir="ltr">11:15 - 11:45</td>
-	      <td class="s7" rowspan="2" style="width: 2%;"></td>
 	      <td class="s2 clickable-cell" dir="ltr" style="width: 42%;" onclick="openModal('abstract77')">
 		Korbinian Staudacher, Ludwig Schmid, Johannes Zeiher, Robert Wille, and Dieter Kranzlmüller<br>
 		<strong>Multi-controlled Phase Gate Synthesis with ZX-calculus applied to Neutral Atoms Hardware</strong>
@@ -919,9 +1032,14 @@
 	      <td class="s2" dir="ltr">12:15 - 14:00</td>
 	      <td class="s3" dir="ltr" colspan="3">Lunch</td>
 	    </tr>
+	    <tr style="height: 10px">
+	      <td class="s0"></td>
+	      <td class="s7" rowspan="5" style="width: 2%;"></td>
+	      <td class="session-chair">Session chair: Barbara Amaral &bullet; <span class="room">Room: 1401</span></td>
+	      <td class="session-chair">Session chair: Tuomas Laakkonen &bullet; <span class="room">Room: 1402</span></td>
+	    </tr>
 	    <tr style="height: 30px">
 	      <td class="s2" dir="ltr">14:00 - 14:30</td>
-	      <td class="s7" rowspan="4" style="width: 2%;"></td>
 	      <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract131')">
 		Farid Shahandeh, Theodoros Yianni, and Mina Doosti<br>
 		<strong>Contextuality of Cloning via Dimensional Witnesses</strong>
@@ -934,9 +1052,10 @@
 	    </tr>
 	    <tr style="height: 30px">
 	      <td class="s2" dir="ltr">14:30 - 15:00</td>
-	      <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract46')">
-		Samson Abramsky, Serban Cercelescu, and Carmen Maria Constantin<br>
-		<strong>Commutation Groups and State-Independent Contextuality</strong>
+	      <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract17')">
+		Raman Choudhary, Rui Soares Barbosa, and Adán Cabello<br>
+		<strong>Lifting noncontextuality inequalities</strong>
+		<img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
 	      </td>
 	      <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract42')">
 		Matthew Sutcliffe and Aleks Kissinger<br>
@@ -971,9 +1090,14 @@
 	      <td class="s2" dir="ltr">16:00 - 16:30</td>
 	      <td class="s3" dir="ltr" colspan="3">Coffee break</td>
 	    </tr>
+	    <tr style="height: 10px">
+	      <td class="s0"></td>
+	      <td class="s7" rowspan="4" style="width: 2%;"></td>
+	      <td class="session-chair">Session chair: TBA &bullet; <span class="room">Room: 1401</span></td>
+	      <td class="session-chair">Session chair: TBA &bullet; <span class="room">Room: 1402</span></td>
+	    </tr>
 	    <tr style="height: 30px">
 	      <td class="s2" dir="ltr">16:30 - 17:00</td>
-	      <td class="s7" rowspan="3" style="width: 2%;"></td>
 	      <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract76')">
 		Albert Aloy, Thomas Galley, Caroline Jones, Stefan Ludescher, and Markus Müller<br>
 		<strong>Spin-bounded correlations: rotation boxes within and beyond quantum theory</strong>
@@ -991,9 +1115,16 @@
 		<strong>The Mobius game and other Bell test for relativity</strong>
 		<div class="virtual">&#127916;</div>
 	      </td>
+	      <!--
 	      <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract119')">
 		Tatsuki Odake, Hlér Kristjánsson, Philip Taranto, and Mio Murao<br>
 		<strong>Universal algorithm for transforming Hamiltonian eigenvalues</strong>
+		<img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
+	      </td>
+	      -->
+	      <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract19')">
+		Satoshi Yoshida, Akihito Soeda, and Mio Murao<br>
+		<strong>Optimal protocols for universal adjointation of isometry operations</strong>
 		<img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
 	      </td>
 	    </tr>
@@ -1004,11 +1135,7 @@
 		<strong>Information-theoretic derivation of energy and speed bounds</strong>
 		<img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
 	      </td>
-	      <td class="s2 clickable-cell" dir="ltr" onclick="openModal('abstract19')">
-		Satoshi Yoshida, Akihito Soeda, and Mio Murao<br>
-		<strong>Optimal protocols for universal adjointation of isometry operations</strong>
-		<img src="images/pdf-icon-small.png" alt="PDF" class="pdf-icon-small">
-	      </td>
+	      <td class="s2" dir="ltr"></td>
 	    </tr>
 	  </tbody>
 	</table>
@@ -1027,7 +1154,7 @@
       <a href="https://www.quantinuum.com/">www.quantinuum.com</a>
       </p>
       <strong>Ariel Bendersky</strong>
-      <h4>TII</h4>
+      <h4>Technology Innovation Institute</h4>
       <p style="text-align: justify;">
       <a href="https://www.tii.ae/">www.tii.ae</a>
       </p>
@@ -1232,6 +1359,12 @@
       and offers new insights and tools for studying the relations between the principles of NSS and no causal loops
       in different spacetime geometries and theories of information processing.
       </p>
+      <p style="text-align: right;">
+      <a href="abstracts/8.pdf" class="pdf-link-modal">
+	<img src="images/pdf-icon.png" alt="PDF">
+	Extended abstract
+      </a>
+      </p>
     </div>
   </div>
   <div id="abstract13" class="modal">
@@ -1313,6 +1446,12 @@
 
       Our results shed light on the structure of noncontextuality polytopes and the relationship between such
       polytopes across different scenarios.
+      </p>
+      <p style="text-align: right;">
+      <a href="abstracts/17.pdf" class="pdf-link-modal">
+	<img src="images/pdf-icon.png" alt="PDF">
+	Extended abstract
+      </a>
       </p>
     </div>
   </div>
@@ -1996,6 +2135,12 @@
       view contextuality as arising from a game played between Experimenter and Nature, allowing for causal
       dependencies in the actions of both the Experimenter (choice of measurements) and Nature (choice of outcomes).
       </p>
+      <p style="text-align: right;">
+      <a href="abstracts/89.pdf" class="pdf-link-modal">
+	<img src="images/pdf-icon.png" alt="PDF">
+	Extended abstract
+      </a>
+      </p>
     </div>
   </div>
   <div id="abstract94" class="modal">
@@ -2061,6 +2206,12 @@
       from Vorob'ev, originating in the realm of game theory, in order to say, for any temporal setup, whether
       nonclassical correlations can arise. We demonstrate that this Vorob'ev-type result can be extended to the case
       in which outcomes as well as measurements can be stored in memory.
+      </p>
+      <p style="text-align: right;">
+      <a href="abstracts/100.pdf" class="pdf-link-modal">
+	<img src="images/pdf-icon.png" alt="PDF">
+	Extended abstract
+      </a>
       </p>
     </div>
   </div>
